@@ -28,7 +28,7 @@ void main() {
     expect(Colors.black.lighten(0.5), Color(0xffff0000));
   });
 
-  test('douple extensions', () {
+  test('double extensions', () {
     expect(15.0.format(), "15");
     expect(15.5.format(), "15.50");
     expect(15.5.format(" sar"), "15.50 sar");
