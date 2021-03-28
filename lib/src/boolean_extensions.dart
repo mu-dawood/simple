@@ -1,4 +1,4 @@
-extension BooleanExtentions on bool? {
+extension BooleanExtensions on bool? {
   /// When true this will return call back
   /// When false or null this will return other
   T? onTrue<T>(T callback, [T? otherCallBack]) {

@@ -1,6 +1,6 @@
 import 'duration_formatters/duration_formatters.dart';
 
-extension DurationExtentions on Duration {
+extension DurationExtensions on Duration {
   /// Format duration to readable string
   /// you can choose one of our formatters `DefaultDurationFormatter` or `ArabicEnglishDurationFormatter`
   /// or you can implement `DurationFormatter` and create your own

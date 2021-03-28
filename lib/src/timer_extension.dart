@@ -1,6 +1,6 @@
 import 'dart:async';
 
-extension TimerExtentions on Timer {
+extension TimerExtensions on Timer {
   T? onActive<T>(T callback) {
     if (this.isActive)
       return callback;

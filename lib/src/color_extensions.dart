@@ -1,6 +1,6 @@
 import 'package:flutter/painting.dart';
 
-extension ColorExtentions on Color {
+extension ColorExtensions on Color {
   /// This will return the lighter color of current
   /// amount must be between 0 & 1
   Color lighten([double amount = 0.1]) {
