@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 
 extension StringExtensions on String? {
-  /// convert string to dateTime
-  DateTime? toDate() {
-    if (this != null) return DateTime.tryParse(this!);
-    return null;
-  }
-
   /// will parse string to time of days
   /// example 19:16 or 07:18 pm
   TimeOfDay? toTimeOfDay() {
@@ -68,11 +62,6 @@ extension StringExtensions on String? {
     return this.toTimeOfDay() != null;
   }
 
-  /// check the string can be date
-  bool get isDate {
-    return DateTime.tryParse(this ?? "") != null;
-  }
-
   /// check the string is null or empty or whitespaces
   bool get isNullOrEmptyOrWhiteSpace {
     return this == null || (this ?? "").trim() == "";
@@ -102,18 +91,18 @@ extension StringExtensions on String? {
   }
 
   /// return `true` if the are equals with case matching
-  bool equal(String str) {
+  bool equal(String? str) {
     return this == str;
   }
 
   /// return `true` if the are equals without case matching
-  bool equalIgnoreCase(String str) {
-    return this!.toLowerCase() == str.toLowerCase();
+  bool equalIgnoreCase(String? str) {
+    return this?.toLowerCase() == str?.toLowerCase();
   }
 
   /// return `Sting` without any spaces
-  String get hardTrim {
-    return this!.replaceAll(' ', '');
+  String? get hardTrim {
+    return this?.replaceAll(' ', '');
   }
 
   /// `queen`  will return ['q','u','e','e','n']
@@ -137,7 +126,8 @@ extension StringExtensions on String? {
 
   /// convert `String` to `DateTime` if is possible
   /// else will throw the standard exception
-  DateTime get toDate {
-    return DateTime.parse(this!);
+  DateTime? toDate() {
+    if (this != null) return DateTime.tryParse(this!);
+    return null;
   }
 }
