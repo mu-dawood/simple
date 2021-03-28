@@ -34,4 +34,7 @@ extension BooleanExtensions on bool? {
     else
       return otherCallBack;
   }
+
+  /// convert `bool` to int with value `0` or `1` based on `boolean value`
+  int get toInt => this! ? 1 : 0;
 }
