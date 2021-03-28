@@ -1,4 +1,4 @@
-extension BooleanExtentions on bool? {
+extension BooleanExtensions on bool? {
   /// When true this will return call back
   /// When false or null this will return other
   T? onTrue<T>(T callback, [T? otherCallBack]) {
@@ -34,4 +34,7 @@ extension BooleanExtentions on bool? {
     else
       return otherCallBack;
   }
+
+  /// convert `bool` to int with value `0` or `1` based on `boolean value`
+  int get toInt => this! ? 1 : 0;
 }

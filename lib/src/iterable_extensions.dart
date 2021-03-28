@@ -1,4 +1,4 @@
-extension IterableExtentions<T> on Iterable<T> {
+extension IterableExtensions<T> on Iterable<T> {
   T? firstOrDefault([bool Function(T element)? test]) {
     var filtered = test == null ? this : this.where(test);
     if (filtered.length > 0)

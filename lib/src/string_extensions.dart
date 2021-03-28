@@ -100,4 +100,44 @@ extension StringExtensions on String? {
             r'^(009665|0096605|9665|96605|\+9665|\+96605|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$')
         .hasMatch(this ?? "");
   }
+
+  /// return `true` if the are equals with case matching
+  bool equal(String str) {
+    return this == str;
+  }
+
+  /// return `true` if the are equals without case matching
+  bool equalIgnoreCase(String str) {
+    return this!.toLowerCase() == str.toLowerCase();
+  }
+
+  /// return `Sting` without any spaces
+  String get hardTrim {
+    return this!.replaceAll(' ', '');
+  }
+
+  /// `queen`  will return ['q','u','e','e','n']
+  List<String> get toChars {
+    final charsList = <String>[];
+    for (final char in charsList) {
+      charsList.add(char);
+    }
+    return charsList;
+  }
+
+  /// return true` if stating is valid DateTime format
+  bool get isValidDateFormat {
+    try {
+      DateTime.parse(this!);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  /// convert `String` to `DateTime` if is possible
+  /// else will throw the standard exception
+  DateTime get toDate {
+    return DateTime.parse(this!);
+  }
 }

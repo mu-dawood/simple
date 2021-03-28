@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-extension ContextExtentions on BuildContext {
-  /// When you are in sliver appAppar you may want to get current percent
+extension ContextExtensions on BuildContext {
+  /// When you are in sliver AppBar you may want to get current percent
   /// 0.0 -> Expanded
   /// 1.0 -> Collapsed to toolbar
-  double getFlexibleSpaceBarPercent() {
+  Future<double> getFlexibleSpaceBarPercent() async {
     final FlexibleSpaceBarSettings? settings =
         this.dependOnInheritedWidgetOfExactType<FlexibleSpaceBarSettings>();
     assert(settings != null);
