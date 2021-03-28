@@ -85,7 +85,9 @@ extension StringExtensions on String? {
   }
 
   bool get isInternationalKsaPhone {
-    return RegExp(r'^(009665|0096605|9665|96605|\+9665|\+96605|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$').hasMatch(this ?? "");
+    return RegExp(
+            r'^(009665|0096605|9665|96605|\+9665|\+96605|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$')
+        .hasMatch(this ?? "");
   }
 
   /// return `true` if the are equals with case matching

@@ -5,12 +5,14 @@ extension ContextExtensions on BuildContext {
   /// 0.0 -> Expanded
   /// 1.0 -> Collapsed to toolbar
   Future<double> getFlexibleSpaceBarPercent() async {
-    final FlexibleSpaceBarSettings? settings = this.dependOnInheritedWidgetOfExactType<FlexibleSpaceBarSettings>();
+    final FlexibleSpaceBarSettings? settings =
+        this.dependOnInheritedWidgetOfExactType<FlexibleSpaceBarSettings>();
     assert(settings != null);
     if (settings != null) {
       final double deltaExtent = settings.maxExtent - settings.minExtent;
 
-      return (1.0 - (settings.currentExtent - settings.minExtent) / deltaExtent).clamp(0.0, 1.0);
+      return (1.0 - (settings.currentExtent - settings.minExtent) / deltaExtent)
+          .clamp(0.0, 1.0);
     }
     return 0;
   }
