@@ -15,3 +15,19 @@
 ## [Iterable extensions](https://github.com/mo-ah-dawood/simple/wiki/Iterable-extentions)
 
 ## [Timer extensions](https://github.com/mo-ah-dawood/simple/wiki/Timer-extentions)
+
+
+## Localization
+
+- some extensions need localization so to use localization extensions you have to add `SimpleLocalizations.delegate` in your `localizationsDelegates` 
+
+```dart
+  return MaterialApp(
+    localizationsDelegates: [
+      SimpleLocalizations.delegate,
+      ...other delegates
+    ],
+    supportedLocales: SimpleLocalizations.supportedLocales,
+    home: MyApplicationHome(),
+  );
+```

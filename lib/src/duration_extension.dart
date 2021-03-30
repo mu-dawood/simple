@@ -91,15 +91,16 @@ extension DurationExtensions on Duration {
   ///Localize duration useing TranslatedDurationFormatter formatter
   ///You have to add `SimpleLocalizations.delegate` in your `localizationsDelegates`
   /// ```
-  /// import 'gen_l10n/simple_localizations.dart';
-  ///
   /// return MaterialApp(
-  ///   localizationsDelegates: SimpleLocalizations.localizationsDelegates,
+  ///   localizationsDelegates: [
+  ///     SimpleLocalizations.delegate,
+  ///     ...other delegates
+  ///   ],
   ///   supportedLocales: SimpleLocalizations.supportedLocales,
   ///   home: MyApplicationHome(),
   /// );
   /// ```
-  String localeFormat(
+  String formatWith(
     BuildContext context, {
     int maxParts = 2,
     int secondsToShowNow = 0,

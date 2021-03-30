@@ -19,3 +19,6 @@
 * add `indexedMap` `indexedForEach` to iterable extensions
 * use new flutter Localization  to format duration
 * add `localeFormat` `countDownMicroseconds` ... `countUpnDays`   to Duration extensions
+
+## 1.0.5
+* rename `localeFormat` to `formatWith`

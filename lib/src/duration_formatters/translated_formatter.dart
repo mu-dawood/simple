@@ -1,7 +1,10 @@
 part of duration_formatters;
 
-/// arabi
-/// else will return null
+/// ```
+///  Duration(seconds:100).format(
+///    formatter: TranslatedDurationFormatter(context),
+///  )
+/// ```
 class TranslatedDurationFormatter implements DurationFormatter {
   final BuildContext context;
 
