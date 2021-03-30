@@ -1,6 +1,6 @@
 name: simple
-description: Collection of extension methods to make things simpler
-version: 1.0.3
+description: Collection of extension methods to make your code simple , clean and fast
+version: 1.0.4
 homepage: https://github.com/mo-ah-dawood/simple
 repository: https://github.com/mo-ah-dawood/simple
 issue_tracker: https://github.com/mo-ah-dawood/simple/issues
@@ -12,7 +12,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  intl: any
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter:
+  generate: true

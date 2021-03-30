@@ -13,3 +13,9 @@
 ## 1.0.3
 
 * add `toDate` `isValidDateFormat` `toChars` `hardTrim`  `equal`  `equalIgnoreCase` to string extensions 
+
+## 1.0.4
+
+* add `indexedMap` `indexedForEach` to iterable extensions
+* use new flutter Localization  to format duration
+* add `localeFormat` `countDownMicroseconds` ... `countUpnDays`   to Duration extensions

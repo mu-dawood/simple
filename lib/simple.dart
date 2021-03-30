@@ -8,4 +8,5 @@ export 'src/string_extensions.dart';
 export 'src/boolean_extensions.dart';
 export 'src/duration_extension.dart';
 export 'src/iterable_extensions.dart';
+export 'src/gen_l10n/simple_localizations.dart';
 export 'src/duration_formatters/duration_formatters.dart';

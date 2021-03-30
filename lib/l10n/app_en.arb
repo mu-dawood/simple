@@ -1,0 +1,46 @@
+{
+  "yearsPlural": "{count,plural, =0{} =1{one year} =2{Two years}  other{{count} years}}",
+  "@yearsPlural": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "monthsPlural": "{count,plural, =0{} =1{one month} =2{two months} other{{count} months}}",
+  "@monthsPlural": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "daysPlural": "{count,plural, =0{} =1{one day} =2{two days} other{{count} days}}",
+  "@daysPlural": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "weeksPlural": "{count,plural, =0{} =1{one week} =2{two weeks} other{{count} weeks}}",
+  "@weeksPlural": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "hoursPlural": "{count,plural, =0{} =1{one hour} =2{two hours} other{{count} hours}}",
+  "@hoursPlural": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "minutesPlural": "{count,plural, =0{} =1{one minute} =2{two minutes} other{{count} minutes}}",
+  "@minutesPlural": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "socondsPlural": "{count,plural, =0{} =1{one seconds} =2{two seconds}  other{{count} seconds}}",
+  "@socondsPlural": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "now":"now",
+  "formatSeperator":" and "
+}

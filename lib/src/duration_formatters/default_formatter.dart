@@ -1,5 +1,16 @@
 part of duration_formatters;
 
+/// formatter to be used  with duration formatter
+/// you must do the folowing before use it
+/// ```
+/// import 'gen_l10n/simple_localizations.dart';
+///
+/// return MaterialApp(
+///   localizationsDelegates: SimpleLocalizations.localizationsDelegates,
+///   supportedLocales: SimpleLocalizations.supportedLocales,
+///   home: MyApplicationHome(),
+/// );
+/// ```
 class DefaultDurationFormatter implements DurationFormatter {
   const DefaultDurationFormatter();
   String getSeparator() => " & ";
@@ -35,6 +46,17 @@ class DefaultDurationFormatter implements DurationFormatter {
       return "two days";
     else
       return "$days days";
+  }
+
+  String getWeeks(int weeks) {
+    if (weeks == 0)
+      return "";
+    else if (weeks == 1)
+      return "one week";
+    else if (weeks == 2)
+      return "two weeks";
+    else
+      return "$weeks weeks";
   }
 
   String getHours(int hours) {

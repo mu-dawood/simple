@@ -1,4 +1,5 @@
 extension IterableExtensions<T> on Iterable<T> {
+  /// get the first item that match expression or null if not any
   T? firstOrDefault([bool Function(T element)? test]) {
     var filtered = test == null ? this : this.where(test);
     if (filtered.length > 0)
@@ -7,6 +8,7 @@ extension IterableExtensions<T> on Iterable<T> {
       return null;
   }
 
+  /// get the last item that match expression or null if not any
   T? lastOrDefault([bool Function(T element)? test]) {
     var filtered = test == null ? this : this.where(test);
     if (filtered.length > 0)
@@ -15,6 +17,7 @@ extension IterableExtensions<T> on Iterable<T> {
       return null;
   }
 
+  /// map elements with index and return new map
   Iterable<E> indexedMap<E>(E f(int index, T e)) sync* {
     int index = 0;
     for (T element in this) {
@@ -23,6 +26,7 @@ extension IterableExtensions<T> on Iterable<T> {
     }
   }
 
+  /// loap items with index and element arguments
   void indexedForEach(void f(int index, T element)) {
     int index = 0;
     for (T element in this) {

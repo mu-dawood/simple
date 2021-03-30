@@ -125,9 +125,23 @@ extension StringExtensions on String? {
   }
 
   /// convert `String` to `DateTime` if is possible
-  /// else will throw the standard exception
+  /// else will return null
   DateTime? toDate() {
     if (this != null) return DateTime.tryParse(this!);
+    return null;
+  }
+
+  /// convert `String` to `double` if is possible
+  /// else will return null
+  double? toDouble() {
+    if (this != null) return double.tryParse(this!);
+    return null;
+  }
+
+  /// convert `String` to `int` if is possible
+  /// else will return null
+  int? toInt() {
+    if (this != null) return int.tryParse(this!);
     return null;
   }
 }
