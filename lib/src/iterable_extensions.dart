@@ -14,4 +14,20 @@ extension IterableExtensions<T> on Iterable<T> {
     else
       return null;
   }
+
+  Iterable<E> indexedMap<E>(E f(int index, T e)) sync* {
+    int index = 0;
+    for (T element in this) {
+      yield f(index, element);
+      index++;
+    }
+  }
+
+  void indexedForEach(void f(int index, T element)) {
+    int index = 0;
+    for (T element in this) {
+      f(index, element);
+      index++;
+    }
+  }
 }
