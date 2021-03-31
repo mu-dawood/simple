@@ -38,7 +38,7 @@ class TranslatedDurationFormatter implements DurationFormatter {
     if (weeks == 0)
       return "";
     else
-      return SimpleLocalizations.of(context)!.daysPlural(weeks);
+      return SimpleLocalizations.of(context)!.weeksPlural(weeks);
   }
 
   String getHours(int hours) {
