@@ -1,0 +1,24 @@
+name: simple
+description: Collection of extension methods to make your code simple , clean and fast
+version: 2.0.0
+homepage: https://github.com/mo-ah-dawood/simple/simple
+repository: https://github.com/mo-ah-dawood/simple
+issue_tracker: https://github.com/mo-ah-dawood/simple/issues
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: any
+  simple_dart: ^1.0.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  generate: true
