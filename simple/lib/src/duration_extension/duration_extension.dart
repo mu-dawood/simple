@@ -26,9 +26,10 @@ extension FlutterDurationExtensions on Duration {
     int secondsToShowNow = 0,
   }) {
     var simpleLocalization = SimpleLocalizations.of(context);
-    if (simpleLocalization == null)
+    if (simpleLocalization == null) {
       throw FlutterError(
-          "You have to add `SimpleLocalizations.delegate` in your `localizationsDelegates`");
+          'You have to add `SimpleLocalizations.delegate` in your `localizationsDelegates`');
+    }
     return format(
       maxParts: maxParts,
       secondsToShowNow: 0,

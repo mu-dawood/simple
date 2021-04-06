@@ -6,21 +6,21 @@ import 'package:simple/simple.dart';
 void main() {
   test('bool extension test', () {
     //! OnTrue
-    expect(true.onTrue("result"), "result");
-    expect(null.onTrue("result"), null);
-    expect(false.onTrue("result"), null);
+    expect(true.onTrue('result'), 'result');
+    expect(null.onTrue('result'), null);
+    expect(false.onTrue('result'), null);
     //! OnFalse
-    expect(false.onFalse("result"), "result");
-    expect(null.onFalse("result"), null);
-    expect(true.onFalse("result"), null);
+    expect(false.onFalse('result'), 'result');
+    expect(null.onFalse('result'), null);
+    expect(true.onFalse('result'), null);
     //! onFalseOrNull
-    expect(false.onFalseOrNull("result"), "result");
-    expect(null.onFalseOrNull("result"), "result");
-    expect(true.onFalseOrNull("result"), null);
+    expect(false.onFalseOrNull('result'), 'result');
+    expect(null.onFalseOrNull('result'), 'result');
+    expect(true.onFalseOrNull('result'), null);
     //! onTrueOrNull
-    expect(false.onTrueOrNull("result"), null);
-    expect(null.onTrueOrNull("result"), "result");
-    expect(true.onTrueOrNull("result"), "result");
+    expect(false.onTrueOrNull('result'), null);
+    expect(null.onTrueOrNull('result'), 'result');
+    expect(true.onTrueOrNull('result'), 'result');
   });
 
   test('Color extension test', () {
@@ -29,13 +29,13 @@ void main() {
   });
 
   test('double extensions', () {
-    expect(15.0.format(), "15");
-    expect(15.5.format(), "15.50");
-    expect(15.5.format(" sar"), "15.50 sar");
+    expect(15.0.format(), '15');
+    expect(15.5.format(), '15.50');
+    expect(15.5.format(' sar'), '15.50 sar');
   });
 
   test('duration extensions', () {
-    expect(Duration(hours: 16767).format(), "one year & 11 months");
+    expect(Duration(hours: 16767).format(), 'one year & 11 months');
   });
 
   test('iterable extensions', () {
@@ -50,10 +50,10 @@ void main() {
   });
 
   test('string extensions', () {
-    expect("ss".toTimeOfDay(), null);
-    expect("19:16".toTimeOfDay(), TimeOfDay(hour: 19, minute: 16));
-    expect("7:16 pm".toTimeOfDay(), TimeOfDay(hour: 19, minute: 16));
-    expect("07:16 pm".toTimeOfDay(), TimeOfDay(hour: 19, minute: 16));
-    expect("07:16 am".toTimeOfDay(), TimeOfDay(hour: 07, minute: 16));
+    expect('ss'.toTimeOfDay(), null);
+    expect('19:16'.toTimeOfDay(), TimeOfDay(hour: 19, minute: 16));
+    expect('7:16 pm'.toTimeOfDay(), TimeOfDay(hour: 19, minute: 16));
+    expect('07:16 pm'.toTimeOfDay(), TimeOfDay(hour: 19, minute: 16));
+    expect('07:16 am'.toTimeOfDay(), TimeOfDay(hour: 07, minute: 16));
   });
 }

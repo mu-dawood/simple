@@ -2,64 +2,64 @@ extension StringExtensions on String? {
   /// will convert from english numbers to arabic numbers
   String? englishToArabicNumbers() {
     return this
-        ?.replaceAll("0", "٠")
-        .replaceAll("1", "١")
-        .replaceAll("2", "٢")
-        .replaceAll("3", "٣")
-        .replaceAll("4", "٤")
-        .replaceAll("5", "٥")
-        .replaceAll("6", "٦")
-        .replaceAll("7", "٧")
-        .replaceAll("8", "٨")
-        .replaceAll("9", "٩");
+        ?.replaceAll('0', '٠')
+        .replaceAll('1', '١')
+        .replaceAll('2', '٢')
+        .replaceAll('3', '٣')
+        .replaceAll('4', '٤')
+        .replaceAll('5', '٥')
+        .replaceAll('6', '٦')
+        .replaceAll('7', '٧')
+        .replaceAll('8', '٨')
+        .replaceAll('9', '٩');
   }
 
   /// will convert from arabic numbers to english numbers
   String? arabicToEnglishNumbers() {
     return this
-        ?.replaceAll("٠", "0")
-        .replaceAll("١", "1")
-        .replaceAll("٢", "2")
-        .replaceAll("٣", "3")
-        .replaceAll("٤", "4")
-        .replaceAll("٥", "5")
-        .replaceAll("٦", "6")
-        .replaceAll("٧", "7")
-        .replaceAll("٨", "8")
-        .replaceAll("٩", "9");
+        ?.replaceAll('٠', '0')
+        .replaceAll('١', '1')
+        .replaceAll('٢', '2')
+        .replaceAll('٣', '3')
+        .replaceAll('٤', '4')
+        .replaceAll('٥', '5')
+        .replaceAll('٦', '6')
+        .replaceAll('٧', '7')
+        .replaceAll('٨', '8')
+        .replaceAll('٩', '9');
   }
 
   /// check the string can be double
   bool get isDouble {
-    return double.tryParse(this ?? "") != null;
+    return double.tryParse(this ?? '') != null;
   }
 
   /// check the string is null or empty or whitespaces
   bool get isNullOrEmptyOrWhiteSpace {
-    return this == null || (this ?? "").trim() == "";
+    return this == null || (this ?? '').trim() == '';
   }
 
   /// check the string is null or empty
   bool get isNullOrEmpty {
-    return this == null || this == "";
+    return this == null || this == '';
   }
 
   bool get isLocaleEgyptianPhone {
-    return RegExp(r'^(01|1)([0-9]{9})$').hasMatch(this ?? "");
+    return RegExp(r'^(01|1)([0-9]{9})$').hasMatch(this ?? '');
   }
 
   bool get isInternationalEgyptianPhone {
-    return RegExp(r'^(00201|201|\+201)([0-9]{9})$').hasMatch(this ?? "");
+    return RegExp(r'^(00201|201|\+201)([0-9]{9})$').hasMatch(this ?? '');
   }
 
   bool get isLocaleKsaPhone {
-    return RegExp(r'^(05)(5|0|3|6|4|9|1|8|7)([0-9]{7})$').hasMatch(this ?? "");
+    return RegExp(r'^(05)(5|0|3|6|4|9|1|8|7)([0-9]{7})$').hasMatch(this ?? '');
   }
 
   bool get isInternationalKsaPhone {
     return RegExp(
             r'^(009665|0096605|9665|96605|\+9665|\+96605|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$')
-        .hasMatch(this ?? "");
+        .hasMatch(this ?? '');
   }
 
   /// return `true` if the are equals with case matching

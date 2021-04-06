@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:simple/simple.dart';
+import 'package:simple_dart/simple_dart.dart';
 
 void main() {
- print("1".toInt())
+  print("1".toInt());
 }
