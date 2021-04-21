@@ -1,4 +1,3 @@
-
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
 import 'simple_localizations.dart';
@@ -90,5 +89,5 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
   String get now => 'now';
 
   @override
-  String get formatSeperator => ' and ';
+  String get formatSeperator => ' , ';
 }

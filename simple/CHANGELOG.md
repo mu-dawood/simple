@@ -26,3 +26,7 @@
 
 ## 2.0.0
 * split package to simple and simple_dart so that the non flutter extensions can be used any where
+
+
+## 2.0.4
+* DateTime formates

@@ -27,4 +27,16 @@ extension FlutterStringExtensions on String? {
   bool get isTimeOfDay {
     return toTimeOfDay() != null;
   }
+
+  /// check the string can be DateTime
+  bool get isDateTime {
+    if (this == null) return false;
+    return DateTime.tryParse(this!) != null;
+  }
+
+  /// convert string to date time
+  DateTime? toDate() {
+    if (this == null) return null;
+    return DateTime.tryParse(this!);
+  }
 }
