@@ -30,3 +30,6 @@
 
 ## 2.0.4
 * DateTime formates
+
+## 2.0.5
+* Add `isDark` `isLight` `isRtl` `isLtr` `locale` to context extensiona

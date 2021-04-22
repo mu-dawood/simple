@@ -67,4 +67,21 @@ extension ContextExtensions on BuildContext {
   /// get subtitle2 property from text theme
 
   TextStyle? get subtitle2 => Theme.of(this).textTheme.subtitle2;
+
+  /// Check is current theme is dark
+  bool get isDark => Theme.of(this).brightness == Brightness.dark;
+
+  /// Check is current theme is light
+
+  bool get isLight => Theme.of(this).brightness == Brightness.light;
+
+  /// Check if directionality is rtl
+
+  bool get isRtl => Directionality.of(this) == TextDirection.rtl;
+
+  /// Check if directionality is ltr
+  bool get isLtr => Directionality.of(this) == TextDirection.ltr;
+
+  /// Get current locale if exisis
+  Locale? get locale => Localizations.maybeLocaleOf(this);
 }
