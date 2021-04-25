@@ -32,4 +32,8 @@
 * DateTime formates
 
 ## 2.0.5
-* Add `isDark` `isLight` `isRtl` `isLtr` `locale` to context extensiona
+* Add `isDark` `isLight` `isRtl` `isLtr` `locale` to context extensions
+
+
+## 2.0.6
+* Add `toTextWidget` to context extensions

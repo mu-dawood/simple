@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:ui' as ui show TextHeightBehavior;
 
 extension FlutterStringExtensions on String? {
   /// will parse string to time of days
@@ -39,4 +40,35 @@ extension FlutterStringExtensions on String? {
     if (this == null) return null;
     return DateTime.tryParse(this!);
   }
+
+  /// converts string to text widget
+  Text toTextWidget({
+    TextAlign? textAlign,
+    TextStyle? style,
+    StrutStyle? strutStyle,
+    TextDirection? textDirection,
+    Locale? locale,
+    bool? softWrap,
+    TextOverflow? overflow,
+    double? textScaleFactor,
+    int? maxLines,
+    String? semanticsLabel,
+    TextWidthBasis? textWidthBasis,
+    ui.TextHeightBehavior? textHeightBehavior,
+  }) =>
+      Text(
+        this ?? '',
+        textAlign: textAlign,
+        style: style,
+        strutStyle: strutStyle,
+        textDirection: textDirection,
+        locale: locale,
+        softWrap: softWrap,
+        overflow: overflow,
+        textScaleFactor: textScaleFactor,
+        maxLines: maxLines,
+        semanticsLabel: semanticsLabel,
+        textHeightBehavior: textHeightBehavior,
+        textWidthBasis: textWidthBasis,
+      );
 }
