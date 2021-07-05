@@ -1,12 +1,13 @@
 import 'dart:async';
 
-// ignore: unused_import
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart' as intl;
 
 import 'simple_localizations_ar.dart';
 import 'simple_localizations_en.dart';
+import 'simple_localizations_fr.dart';
+import 'simple_localizations_ur.dart';
 
 /// Callers can lookup localized strings with an instance of SimpleLocalizations returned
 /// by `SimpleLocalizations.of(context)`.
@@ -63,7 +64,6 @@ abstract class SimpleLocalizations {
   SimpleLocalizations(String locale)
       : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
-  // ignore: unused_field
   final String localeName;
 
   static SimpleLocalizations? of(BuildContext context) {
@@ -76,7 +76,9 @@ abstract class SimpleLocalizations {
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('ar'),
-    Locale('en')
+    Locale('en'),
+    Locale('fr'),
+    Locale('ur')
   ];
 
   /// No description provided for @yearsPlural.
@@ -130,7 +132,7 @@ abstract class SimpleLocalizations {
   /// No description provided for @formatSeperator.
   ///
   /// In ar, this message translates to:
-  /// **' و '**
+  /// **' ، '**
   String get formatSeperator;
 }
 
@@ -146,7 +148,7 @@ class _SimpleLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) =>
-      <String>['ar', 'en'].contains(locale.languageCode);
+      <String>['ar', 'en', 'fr', 'ur'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_SimpleLocalizationsDelegate old) => false;
@@ -159,6 +161,10 @@ SimpleLocalizations _lookupSimpleLocalizations(Locale locale) {
       return SimpleLocalizationsAr();
     case 'en':
       return SimpleLocalizationsEn();
+    case 'fr':
+      return SimpleLocalizationsFr();
+    case 'ur':
+      return SimpleLocalizationsUr();
   }
 
   throw FlutterError(

@@ -1,8 +1,7 @@
-// ignore: unused_import
+
+
 import 'package:intl/intl.dart' as intl;
 import 'simple_localizations.dart';
-
-// ignore_for_file: unnecessary_brace_in_string_interps
 
 /// The translations for English (`en`).
 class SimpleLocalizationsEn extends SimpleLocalizations {
@@ -15,7 +14,7 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
       locale: localeName,
       one: 'one year',
       two: 'Two years',
-      other: '${count} years',
+      other: '$count years',
     );
   }
 
@@ -26,7 +25,7 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
       locale: localeName,
       one: 'one month',
       two: 'two months',
-      other: '${count} months',
+      other: '$count months',
     );
   }
 
@@ -37,7 +36,7 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
       locale: localeName,
       one: 'one day',
       two: 'two days',
-      other: '${count} days',
+      other: '$count days',
     );
   }
 
@@ -48,7 +47,7 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
       locale: localeName,
       one: 'one week',
       two: 'two weeks',
-      other: '${count} weeks',
+      other: '$count weeks',
     );
   }
 
@@ -59,7 +58,7 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
       locale: localeName,
       one: 'one hour',
       two: 'two hours',
-      other: '${count} hours',
+      other: '$count hours',
     );
   }
 
@@ -70,7 +69,7 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
       locale: localeName,
       one: 'one minute',
       two: 'two minutes',
-      other: '${count} minutes',
+      other: '$count minutes',
     );
   }
 
@@ -81,7 +80,7 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
       locale: localeName,
       one: 'one seconds',
       two: 'two seconds',
-      other: '${count} seconds',
+      other: '$count seconds',
     );
   }
 

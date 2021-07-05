@@ -21,19 +21,25 @@
 * add `localeFormat` `countDownMicroseconds` ... `countUpnDays`   to Duration extensions
 
 ## 1.0.5
+
 * rename `localeFormat` to `formatWith`
 
-
 ## 2.0.0
+
 * split package to simple and simple_dart so that the non flutter extensions can be used any where
 
-
 ## 2.0.4
+
 * DateTime formates
 
 ## 2.0.5
+
 * Add `isDark` `isLight` `isRtl` `isLtr` `locale` to context extensions
 
-
 ## 2.0.6
+
 * Add `toTextWidget` to context extensions
+
+## 2.0.7
+
+* Add urdu and french language

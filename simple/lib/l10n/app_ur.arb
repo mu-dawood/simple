@@ -1,0 +1,46 @@
+{
+    "yearsPlural": "{count,plural, =0{} =1{ایک سال} =2{دو سال}  few{{count} سال}} other{{count} سال}}",
+    "@yearsPlural": {
+        "placeholders": {
+            "count": {}
+        }
+    },
+    "monthsPlural": "{count,plural, =0{} =1{ایک مہینہ} =2{دو ماہ}  few{{count} مہینہ}} other{{count} مہینہ}}",
+    "@monthsPlural": {
+        "placeholders": {
+            "count": {}
+        }
+    },
+    "daysPlural": "{count,plural, =0{} =1{ایک دن} =2{دو دن}  few{{count} دن}} other{{count} دن}}",
+    "@daysPlural": {
+        "placeholders": {
+            "count": {}
+        }
+    },
+    "weeksPlural": "{count,plural, =0{} =1{ایک ہفتہ} =2{دو ہفتے}  few{{count} ہفتے}} other{{count} ہفتے}}",
+    "@weeksPlural": {
+        "placeholders": {
+            "count": {}
+        }
+    },
+    "hoursPlural": "{count,plural, =0{} =1{ایک گھنٹہ} =2{دو گھنٹے}  few{{count} گھنٹے}} other{{count} گھنٹے}}",
+    "@hoursPlural": {
+        "placeholders": {
+            "count": {}
+        }
+    },
+    "minutesPlural": "{count,plural, =0{} =1{ایک منٹ} =2{دو منٹ}  few{{count} منٹ}} other{{count} منٹ}}",
+    "@minutesPlural": {
+        "placeholders": {
+            "count": {}
+        }
+    },
+    "socondsPlural": "{count,plural, =0{} =1{ایک سیکنڈ} =2{دو سیکنڈ}  few{{count} سیکنڈ}} other{{count} سیکنڈ}}",
+    "@socondsPlural": {
+        "placeholders": {
+            "count": {}
+        }
+    },
+    "now": "ابھی",
+    "formatSeperator": " ، "
+}

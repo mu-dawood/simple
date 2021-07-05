@@ -3,19 +3,19 @@
 import 'package:intl/intl.dart' as intl;
 import 'simple_localizations.dart';
 
-/// The translations for Arabic (`ar`).
-class SimpleLocalizationsAr extends SimpleLocalizations {
-  SimpleLocalizationsAr([String locale = 'ar']) : super(locale);
+/// The translations for Urdu (`ur`).
+class SimpleLocalizationsUr extends SimpleLocalizations {
+  SimpleLocalizationsUr([String locale = 'ur']) : super(locale);
 
   @override
   String yearsPlural(int count) {
     return intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      one: 'عام واحد',
-      two: 'عامين',
-      few: '$count أعوام',
-      other: '$count عام',
+      one: 'ایک سال',
+      two: 'دو سال',
+      few: '$count سال',
+      other: '$count سال',
     );
   }
 
@@ -24,10 +24,10 @@ class SimpleLocalizationsAr extends SimpleLocalizations {
     return intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      one: 'شهر واحد',
-      two: 'شهرين',
-      few: '$count أشهر',
-      other: '$count شهر',
+      one: 'ایک مہینہ',
+      two: 'دو ماہ',
+      few: '$count مہینہ',
+      other: '$count مہینہ',
     );
   }
 
@@ -36,10 +36,10 @@ class SimpleLocalizationsAr extends SimpleLocalizations {
     return intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      one: 'يوم واحد',
-      two: 'يومين',
-      few: '$count أيام',
-      other: '$count يوم',
+      one: 'ایک دن',
+      two: 'دو دن',
+      few: '$count دن',
+      other: '$count دن',
     );
   }
 
@@ -48,10 +48,10 @@ class SimpleLocalizationsAr extends SimpleLocalizations {
     return intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      one: 'أسبوع واحد',
-      two: 'أسبوعين',
-      few: '$count أسابيع',
-      other: '$count أسبوع',
+      one: 'ایک ہفتہ',
+      two: 'دو ہفتے',
+      few: '$count ہفتے',
+      other: '$count ہفتے',
     );
   }
 
@@ -60,10 +60,10 @@ class SimpleLocalizationsAr extends SimpleLocalizations {
     return intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      one: 'ساعة واحدة',
-      two: 'ساعتين',
-      few: '$count ساعات',
-      other: '$count ساعة',
+      one: 'ایک گھنٹہ',
+      two: 'دو گھنٹے',
+      few: '$count گھنٹے',
+      other: '$count گھنٹے',
     );
   }
 
@@ -72,10 +72,10 @@ class SimpleLocalizationsAr extends SimpleLocalizations {
     return intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      one: 'دقيقة واحدة',
-      two: 'دقيقتين',
-      few: '$count دقائق',
-      other: '$count دقيقة',
+      one: 'ایک منٹ',
+      two: 'دو منٹ',
+      few: '$count منٹ',
+      other: '$count منٹ',
     );
   }
 
@@ -84,15 +84,15 @@ class SimpleLocalizationsAr extends SimpleLocalizations {
     return intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      one: 'ثانية واحدة',
-      two: 'ثانيتين',
-      few: '$count ثواني',
-      other: '$count ثانية',
+      one: 'ایک سیکنڈ',
+      two: 'دو سیکنڈ',
+      few: '$count سیکنڈ',
+      other: '$count سیکنڈ',
     );
   }
 
   @override
-  String get now => 'الآن';
+  String get now => 'ابھی';
 
   @override
   String get formatSeperator => ' ، ';
