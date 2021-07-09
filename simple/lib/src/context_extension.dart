@@ -4,7 +4,7 @@ extension ContextExtensions on BuildContext {
   /// When you are in sliver AppBar you may want to get current percent
   /// 0.0 -> Expanded
   /// 1.0 -> Collapsed to toolbar
-  double getFlexibleSpaceBarPercent() {
+  double get appBarExpansionPercent {
     final settings =
         dependOnInheritedWidgetOfExactType<FlexibleSpaceBarSettings>();
     assert(settings != null);
@@ -15,6 +15,11 @@ extension ContextExtensions on BuildContext {
           .clamp(0.0, 1.0);
     }
     return 0;
+  }
+
+// Get app bar settings
+  FlexibleSpaceBarSettings? get flexibleSpaceBarSettings {
+    return dependOnInheritedWidgetOfExactType<FlexibleSpaceBarSettings>();
   }
 
   /// get bodyText1 property from text theme
