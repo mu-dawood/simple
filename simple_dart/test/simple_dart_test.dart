@@ -21,12 +21,6 @@ void main() {
     expect(true.onTrueOrNull('result'), 'result');
   });
 
-  test('double extensions', () {
-    expect(15.0.format(), '15');
-    expect(15.5.format(), '15.50');
-    expect(15.5.format(' sar'), '15.50 sar');
-  });
-
   test('duration extensions', () {
     expect(Duration(hours: 16767).format(), 'one year & 11 months');
   });
