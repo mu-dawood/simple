@@ -156,7 +156,7 @@ extension StringExtensions on String? {
           .hasMatch(this ?? '');
   // check string is youtube valid url
   bool get isFacbookPageOrProfile => RegExp(
-          r'/(?:https?:\/\/)?(?:www\.)?facebook\.com\/(?:(?:\w)*#!\/)?(?:pages\/)?(?:[\w\-]*\/)*?(\/)?([\w\-\.]{5,})/ig')
+          r'(?:(?:http|https):\/\/)?(?:www.)?facebook.com\/(?:(?:\w)*#!\/)?(?:pages\/)?(?:[?\w\-]*\/)?(?:profile.php\?id=(?=\d.*))?([\w\-]*)?')
       .hasMatch(this ?? '');
 
   // check string is snapchat valid url
