@@ -101,14 +101,14 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "2.0.9"
+    version: "2.1.0"
   simple_dart:
     dependency: transitive
     description:
       name: simple_dart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.4"
+    version: "1.0.6"
   sky_engine:
     dependency: transitive
     description: flutter
