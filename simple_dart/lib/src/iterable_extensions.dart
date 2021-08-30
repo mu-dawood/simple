@@ -37,19 +37,14 @@ extension IterableExtensions<T> on Iterable<T> {
     }
   }
 
-  bool _containsElement(T e) {
-    for (var element in this) {
-      if (element.toString().compareTo(e.toString()) == 0) return true;
-    }
-    return false;
-  }
-
   /// Return a new list without dublicated elements
   /// you can use `.toSet().toList()` but the order may not be the same
-  List<T> removeDuplicates() {
+  List<T> removeDuplicates([bool Function(T a, T b)? compare]) {
     var tempList = <T>[];
-    forEach((element) {
-      if (!tempList._containsElement(element)) tempList.add(element);
+    forEach((a) {
+      if (!tempList.any((b) => compare == null ? a == b : compare(a, b))) {
+        tempList.add(a);
+      }
     });
 
     return tempList;
