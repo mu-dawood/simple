@@ -1,0 +1,18 @@
+{
+    "actionButtons": {
+        "commands": [
+            {
+                "name": "Puplish simple",
+                "color": "orange",
+                "command": "flutter pub publish",
+                "cwd": "${workspaceFolder}/fcm_config"
+            },
+            {
+                "name": "Puplish simple dart",
+                "color": "orange",
+                "command": "flutter pub publish",
+                "cwd": "${workspaceFolder}/fcm_localization"
+            },
+        ]
+    },
+}

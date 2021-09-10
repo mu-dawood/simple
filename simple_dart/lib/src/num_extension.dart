@@ -11,7 +11,6 @@ extension NumExtensions on num? {
     return this!
         .toStringAsFixed(fractionDigits)
         .replaceAll(RegExp(r'([.]*0)(?!.*\d)'), '');
-    ;
   }
 
   String currency({
