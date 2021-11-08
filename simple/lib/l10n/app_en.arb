@@ -42,5 +42,256 @@
     }
   },
   "now":"now",
-  "formatSeperator":" , "
+  "formatSeperator":" , ",
+  "mustBeDateAfter": "You must enter a later date for {after}",
+  "@mustBeDateAfter": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "after": {
+        "type": "DateTime",
+        "format": "yMMMEd"
+      }
+    }
+  },
+  "mustBeDateBefore": "You must enter an earlier date for {before}",
+  "@mustBeDateBefore": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "before": {
+        "type": "DateTime",
+        "format": "yMMMEd"
+      }
+    }
+  },
+  "mustBeDouble": "You must enter a decimal number",
+  "@mustBeDouble": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeFacbookPageOrProfile": "You must enter a Facbook link",
+  "@mustBeFacbookPageOrProfile": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeGitHubUser": "You must enter a Github account link",
+  "@mustBeGitHubUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeHexColor": "You must enter a correct color such as (#ff0000)",
+  "@mustBeHexColor": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInstagramUser": "Instagram account link must be entered",
+  "@mustBeInstagramUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInteger": "You must enter a non-decimal number",
+  "@mustBeInteger": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInternationalEgyptianPhone": "You must enter an Egyptian number in the international format such as (2015xxxxxxxx)",
+  "@mustBeInternationalEgyptianPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInternationalKsaPhone": "You must enter a Saudi number in the international format such as (96605xxxxxxxx)",
+  "@mustBeInternationalKsaPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLinkedinUser": "Linkedin account link must be entered",
+  "@mustBeLinkedinUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLocaleEgyptianPhone": "You must enter a local Egyptian number such as (015xxxxxxxx)",
+  "@mustBeLocaleEgyptianPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLocaleKsaPhone": "You must enter a local Saudi number such as (05xxxxxxxx)",
+  "@mustBeLocaleKsaPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeNumber": "You must enter a number",
+  "@mustBeNumber": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBePhone": "You must enter a valid phone",
+  "@mustBePhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeRedditUser": "Reddit account link must be entered",
+  "@mustBeRedditUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeSnapchatProfile": "You must enter a Snapchat account link",
+  "@mustBeSnapchatProfile": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeTimeOfDayAfter": "You must enter a later time to {after}",
+  "@mustBeTimeOfDayAfter": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "after": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeTimeOfDayBefore": "You must enter an earlier time to {before}",
+  "@mustBeTimeOfDayBefore": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "before": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeTwitterUser": "Twitter account link must be entered",
+  "@mustBeTwitterUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeYoutubeUrl": "Youtube link must be entered",
+  "@mustBeYoutubeUrl": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustEmail": "You must enter a valid email",
+  "@mustEmail": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustUrl": "You must enter a valid link",
+  "@mustUrl": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "required": "Excuse me! This field is required",
+  "stringMaxLength": "The text must be no longer than {max}",
+  "@stringMaxLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMinLength": "The length of the text must be at least {min}",
+  "@stringMinLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMustBeInRange": "You must enter a text of length not less than {min} and not more than {max}",
+  "@stringMustBeInRange": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMustBeDateTime": "You must enter a valid date",
+  "@stringMustBeDateTime": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "stringMustBeTimeOfDay": "You must enter a valid time",
+  "@stringMustBeTimeOfDay": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -5,13 +5,13 @@
                 "name": "Puplish simple",
                 "color": "orange",
                 "command": "flutter pub publish",
-                "cwd": "${workspaceFolder}/fcm_config"
+                "cwd": "${workspaceFolder}/simple"
             },
             {
                 "name": "Puplish simple dart",
                 "color": "orange",
                 "command": "flutter pub publish",
-                "cwd": "${workspaceFolder}/fcm_localization"
+                "cwd": "${workspaceFolder}/simple_dart"
             },
         ]
     },

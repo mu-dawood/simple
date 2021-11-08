@@ -42,5 +42,256 @@
         }
     },
     "now": "à présent",
-    "formatSeperator": " ، "
+    "formatSeperator": " ، ",
+    "mustBeDateAfter": "Vous devez entrer une date ultérieure pour {after}",
+  "@mustBeDateAfter": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "after": {
+        "type": "DateTime",
+        "format": "yMMMEd"
+      }
+    }
+  },
+  "mustBeDateBefore": "Vous devez entrer une date antérieure pour {before}",
+  "@mustBeDateBefore": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "before": {
+        "type": "DateTime",
+        "format": "yMMMEd"
+      }
+    }
+  },
+  "mustBeDouble": "Vous devez entrer un nombre décimal",
+  "@mustBeDouble": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeFacbookPageOrProfile": "Vous devez saisir un lien Facebook",
+  "@mustBeFacbookPageOrProfile": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeGitHubUser": "Vous devez saisir un lien de compte Github",
+  "@mustBeGitHubUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeHexColor": "Vous devez entrer une couleur correcte telle que (#ff0000)",
+  "@mustBeHexColor": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInstagramUser": "Le lien du compte Instagram doit être saisi",
+  "@mustBeInstagramUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInteger": "Vous devez entrer un nombre non décimal",
+  "@mustBeInteger": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInternationalEgyptianPhone": "Vous devez entrer un numéro égyptien au format international tel que (2015xxxxxxxx)",
+  "@mustBeInternationalEgyptianPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInternationalKsaPhone": "Vous devez entrer un numéro saoudien au format international tel que (96605xxxxxxxx)",
+  "@mustBeInternationalKsaPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLinkedinUser": "Le lien du compte Linkedin doit être saisi",
+  "@mustBeLinkedinUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLocaleEgyptianPhone": "Vous devez entrer un numéro égyptien local tel que (015xxxxxxxx)",
+  "@mustBeLocaleEgyptianPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLocaleKsaPhone": "Vous devez entrer un numéro saoudien local tel que (05xxxxxxxx)",
+  "@mustBeLocaleKsaPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeNumber": "Vous devez entrer un numéro",
+  "@mustBeNumber": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBePhone": "Vous devez entrer un téléphone valide",
+  "@mustBePhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeRedditUser": "Le lien du compte Reddit doit être saisi",
+  "@mustBeRedditUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeSnapchatProfile": "Vous devez saisir un lien de compte Snapchat",
+  "@mustBeSnapchatProfile": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeTimeOfDayAfter": "Vous devez entrer ultérieurement pour {after}",
+  "@mustBeTimeOfDayAfter": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "after": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeTimeOfDayBefore": "Vous devez entrer une date antérieure pour {before}",
+  "@mustBeTimeOfDayBefore": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "before": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeTwitterUser": "Le lien du compte Twitter doit être saisi",
+  "@mustBeTwitterUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeYoutubeUrl": "Le lien Youtube doit être saisi",
+  "@mustBeYoutubeUrl": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustEmail": "Vous devez entrer un e-mail valide",
+  "@mustEmail": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustUrl": "Vous devez saisir un lien valide",
+  "@mustUrl": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "required": "Excuse-moi! Ce champ est obligatoire",
+  "stringMaxLength": "Le texte ne doit pas dépasser {max}",
+  "@stringMaxLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMinLength": "La longueur du texte doit être d'au moins {min}",
+  "@stringMinLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMustBeInRange": "Vous devez saisir un texte d'une longueur d'au moins {min} et d'au plus {max}",
+  "@stringMustBeInRange": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMustBeDateTime": "Vous devez entrer une date valide",
+  "@stringMustBeDateTime": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "stringMustBeTimeOfDay": "Vous devez entrer une heure valide",
+  "@stringMustBeTimeOfDay": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
 }

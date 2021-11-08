@@ -6,11 +6,18 @@ extension NumExtensions on num? {
     return format.format(this);
   }
 
-  String noTrailing([int fractionDigits = 2]) {
+  String noTrailing([int? fractionDigits]) {
     if (this == null) return '';
-    return this!
-        .toStringAsFixed(fractionDigits)
-        .replaceAll(RegExp(r'([.]*0)(?!.*\d)'), '');
+    var str = ((fractionDigits == null
+            ? this!.toString()
+            : this!.toStringAsFixed(fractionDigits)))
+        .replaceAll(r'\.0+$', '');
+
+    var dotIndex = str.indexOf(".");
+    if (dotIndex < 0 || fractionDigits != null) return str;
+    var last = str.lastIndexOf(RegExp(r'[1-9]'));
+
+    return str.substring(0, last + 1);
   }
 
   String currency({

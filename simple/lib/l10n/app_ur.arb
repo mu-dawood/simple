@@ -42,5 +42,256 @@
         }
     },
     "now": "ابھی",
-    "formatSeperator": " ، "
+    "formatSeperator": " ، ",
+    "mustBeDateBefore": "آپ کو پہلے کی تاریخ درج کرنا ضروری ہے {before}",
+  "@mustBeDateBefore": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "before": {
+        "type": "DateTime",
+        "format": "yMMMEd"
+      }
+    }
+  },
+  "mustBeDouble": "آپ کو ایک دشملو نمبر درج کرنا ضروری ہے",
+  "@mustBeDouble": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeFacbookPageOrProfile": "آپ کو ایک فیکبک لنک درج کرنا ہوگا",
+  "@mustBeFacbookPageOrProfile": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeGitHubUser": "آپ کو ایک Github اکاؤنٹ لنک درج کرنا ہوگا",
+  "@mustBeGitHubUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeHexColor": "آپ کو صحیح رنگ درج کرنا ہوگا جیسے (#ff0000)",
+  "@mustBeHexColor": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInstagramUser": "Instagram اکاؤنٹ کا لنک درج ہونا ضروری ہے",
+  "@mustBeInstagramUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInteger": "آپ کو ایک غیر دشملو نمبر درج کرنا ضروری ہے",
+  "@mustBeInteger": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInternationalEgyptianPhone": "آپ کو بین الاقوامی شکل میں ایک مصری نمبر درج کرنا ہوگا جیسے (2015xxxxxxxx)",
+  "@mustBeInternationalEgyptianPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInternationalKsaPhone": "آپ کو بین الاقوامی شکل میں سعودی نمبر درج کرنا ہوگا جیسے (96605xxxxxxxx)",
+  "@mustBeInternationalKsaPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLinkedinUser": "لنکڈین اکاؤنٹ کا لنک درج ہونا ضروری ہے",
+  "@mustBeLinkedinUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLocaleEgyptianPhone": "آپ کو مقامی مصری نمبر درج کرنا ہوگا جیسے (015xxxxxxxx)",
+  "@mustBeLocaleEgyptianPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLocaleKsaPhone": "آپ کو ایک مقامی سعودی نمبر درج کرنا ہوگا جیسے (05xxxxxxxx)",
+  "@mustBeLocaleKsaPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeNumber": "آپ کو ایک نمبر درج کرنا ہوگا",
+  "@mustBeNumber": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBePhone": "آپ کو ایک درست فون درج کرنا ضروری ہے",
+  "@mustBePhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeRedditUser": "ریڈٹ اکاؤنٹ کا لنک درج ہونا ضروری ہے",
+  "@mustBeRedditUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeSnapchatProfile": "آپ کو ایک سنیپ چیٹ اکاؤنٹ لنک درج کرنا ہوگا",
+  "@mustBeSnapchatProfile": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeTimeOfDayAfter": "آپ کو بعد میں داخل ہونا ضروری ہے {after}",
+  "@mustBeTimeOfDayAfter": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "after": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeTimeOfDayBefore": "آپ کو پہلے وقت میں داخل ہونا ضروری ہے {before}",
+  "@mustBeTimeOfDayBefore": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "before": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeTwitterUser": "ٹویٹر اکاؤنٹ کا لنک درج ہونا ضروری ہے",
+  "@mustBeTwitterUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeYoutubeUrl": "یو ٹیوب لنک داخل ہونا ضروری ہے",
+  "@mustBeYoutubeUrl": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustEmail": "آپ کو ایک درست ای میل درج کرنا ضروری ہے",
+  "@mustEmail": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustUrl": "آپ کو ایک درست لنک درج کرنا ضروری ہے",
+  "@mustUrl": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "required": "معذرت! اس کو پر کرنا ضروری ہے",
+  "stringMaxLength": "متن {max} سے زیادہ نہیں ہونا چاہیے",
+  "@stringMaxLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMinLength": "متن کی لمبائی کم از کم {min} ہونی چاہیے",
+  "@stringMinLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMustBeInRange": "آپ کو طوالت کا متن درج کرنا چاہیے جو {min} سے کم نہ ہو اور {max} سے زیادہ نہ ہو۔",
+  "@stringMustBeInRange": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMustBeDateTime": "آپ کو ایک درست تاریخ درج کرنی ہوگی۔",
+  "@stringMustBeDateTime": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "stringMustBeTimeOfDay": "آپ کو ایک درست وقت درج کرنا ہوگا۔",
+  "@stringMustBeTimeOfDay": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeDateAfter": "{after} کے لیے بعد کی تاریخ درج کرنا ضروری ہے",
+  "@mustBeDateAfter": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "after": {
+        "type": "DateTime",
+        "format": "yMMMEd"
+      }
+    }
+  }
 }

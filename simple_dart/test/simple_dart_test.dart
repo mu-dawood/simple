@@ -25,6 +25,19 @@ void main() {
     expect(Duration(hours: 16767).format(), 'one year & 11 months');
   });
 
+  test('num extensions', () {
+    expect(15.0.noTrailing(), '15');
+    expect((15.5).noTrailing(), '15.5');
+    expect((15.55).noTrailing(), '15.55');
+    expect((15.500005).noTrailing(), '15.500005');
+    expect((15.5000050).noTrailing(10), '15.5000050000');
+    expect((15.5000050).noTrailing(), '15.500005');
+    expect((0.5000050).noTrailing(), '0.500005');
+    expect((15.5).noTrailing(2), '15.50');
+    expect((15.05).noTrailing(2), '15.05');
+    expect(15.5.noTrailing(), '15.5');
+  });
+
   test('iterable extensions', () {
     var list = [DateTime(2000), DateTime(2001), DateTime(2002)];
     expect(list.firstOrDefault(), list[0]);

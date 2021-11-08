@@ -96,4 +96,153 @@ class SimpleLocalizationsAr extends SimpleLocalizations {
 
   @override
   String get formatSeperator => ' ، ';
+
+  @override
+  String get required => 'عذرا! هذا الحقل مطلوب';
+
+  @override
+  String stringMaxLength(String value, int max) {
+    return 'يجب أن لا يزيد طول النص عن $max';
+  }
+
+  @override
+  String stringMinLength(String value, int min) {
+    return 'يجب أن لا يقل طول النص عن $min';
+  }
+
+  @override
+  String stringMustBeInRange(String value, int min, int max) {
+    return 'يجب إدخال نص  لايقل طوله عن $min ولا يزيد عن $max';
+  }
+
+  @override
+  String stringMustBeDateTime(String value) {
+    return 'يجب إدخال تاريخ صحيح';
+  }
+
+  @override
+  String stringMustBeTimeOfDay(String value) {
+    return 'يجب إدخال وقت صحيح';
+  }
+
+  @override
+  String mustBeDateAfter(String value, DateTime after) {
+    final intl.DateFormat afterDateFormat = intl.DateFormat.yMMMEd(localeName);
+    final String afterString = afterDateFormat.format(after);
+
+    return 'يجب إدخال تاريخ لاحق ل $afterString';
+  }
+
+  @override
+  String mustBeDateBefore(String value, DateTime before) {
+    final intl.DateFormat beforeDateFormat = intl.DateFormat.yMMMEd(localeName);
+    final String beforeString = beforeDateFormat.format(before);
+
+    return 'يجب إدخال تاريخ سابق ل $beforeString';
+  }
+
+  @override
+  String mustBeTimeOfDayAfter(String value, String after) {
+    return 'يجب إدخال وقت لاحق ل $after';
+  }
+
+  @override
+  String mustBeTimeOfDayBefore(String value, String before) {
+    return 'يجب إدخال وقت سابق ل $before';
+  }
+
+  @override
+  String mustBeNumber(String value) {
+    return 'يجب إدخال رقم';
+  }
+
+  @override
+  String mustBeInteger(String value) {
+    return 'يجب إدخال رقم غير عشري';
+  }
+
+  @override
+  String mustBeDouble(String value) {
+    return 'يجب إدخال رقم عشري';
+  }
+
+  @override
+  String mustBeGitHubUser(String value) {
+    return 'يجب إدخال رابط حساب Github';
+  }
+
+  @override
+  String mustBeRedditUser(String value) {
+    return 'يجب إدخال رابط حساب Reddit';
+  }
+
+  @override
+  String mustBeInstagramUser(String value) {
+    return 'يجب إدخال رابط حساب Instagram';
+  }
+
+  @override
+  String mustBeLinkedinUser(String value) {
+    return 'يجب إدخال رابط حساب Linkedin';
+  }
+
+  @override
+  String mustBeTwitterUser(String value) {
+    return 'يجب إدخال رابط حساب Twitter';
+  }
+
+  @override
+  String mustBeYoutubeUrl(String value) {
+    return 'يجب إدخال رابط Youtube';
+  }
+
+  @override
+  String mustBeFacbookPageOrProfile(String value) {
+    return 'يجب إدخال رابط  Facbook';
+  }
+
+  @override
+  String mustBeSnapchatProfile(String value) {
+    return 'يجب إدخال رابط حساب Snapchat';
+  }
+
+  @override
+  String mustUrl(String value) {
+    return 'يجب إدخال رابط صحيح';
+  }
+
+  @override
+  String mustEmail(String value) {
+    return 'يجب إدخال بريد إلكتروني صحيح';
+  }
+
+  @override
+  String mustBePhone(String value) {
+    return 'يجب إدخال هاتف صحيح';
+  }
+
+  @override
+  String mustBeHexColor(String value) {
+    return 'يجب إدخال لون صحيح مثل (#ff0000)';
+  }
+
+  @override
+  String mustBeLocaleEgyptianPhone(String value) {
+    return 'يجب إدخال رقم مصري محلي مثل (015xxxxxxxx)';
+  }
+
+  @override
+  String mustBeInternationalEgyptianPhone(String value) {
+    return 'يجب إدخال رقم مصري بالصيغة الدولية مثل (2015xxxxxxxx)';
+  }
+
+  @override
+  String mustBeLocaleKsaPhone(String value) {
+    return 'يجب إدخال رقم سعودي محلي مثل (05xxxxxxxx)';
+  }
+
+  @override
+  String mustBeInternationalKsaPhone(String value) {
+    return 'يجب إدخال رقم سعودي بالصيغة الدولية مثل (96605xxxxxxxx)';
+  }
 }

@@ -41,6 +41,257 @@
       "count": {}
     }
   },
-  "now":"الآن",
-  "formatSeperator":" ، "
+  "now": "الآن",
+  "formatSeperator": " ، ",
+  "required": "عذرا! هذا الحقل مطلوب",
+  "stringMaxLength": "يجب أن لا يزيد طول النص عن {max}",
+  "@stringMaxLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMinLength": "يجب أن لا يقل طول النص عن {min}",
+  "@stringMinLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMustBeInRange": "يجب إدخال نص  لايقل طوله عن {min} ولا يزيد عن {max}",
+  "@stringMustBeInRange": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "stringMustBeDateTime": "يجب إدخال تاريخ صحيح",
+  "@stringMustBeDateTime": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "stringMustBeTimeOfDay": "يجب إدخال وقت صحيح",
+  "@stringMustBeTimeOfDay": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeDateAfter": "يجب إدخال تاريخ لاحق ل {after}",
+  "@mustBeDateAfter": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "after": {
+        "type": "DateTime",
+        "format": "yMMMEd"
+      }
+    }
+  },
+  "mustBeDateBefore": "يجب إدخال تاريخ سابق ل {before}",
+  "@mustBeDateBefore": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "before": {
+        "type": "DateTime",
+        "format": "yMMMEd"
+      }
+    }
+  },
+  "mustBeTimeOfDayAfter": "يجب إدخال وقت لاحق ل {after}",
+  "@mustBeTimeOfDayAfter": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "after": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeTimeOfDayBefore": "يجب إدخال وقت سابق ل {before}",
+  "@mustBeTimeOfDayBefore": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "before": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeNumber": "يجب إدخال رقم",
+  "@mustBeNumber": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInteger": "يجب إدخال رقم غير عشري",
+  "@mustBeInteger": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeDouble": "يجب إدخال رقم عشري",
+  "@mustBeDouble": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeGitHubUser": "يجب إدخال رابط حساب Github",
+  "@mustBeGitHubUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeRedditUser": "يجب إدخال رابط حساب Reddit",
+  "@mustBeRedditUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInstagramUser": "يجب إدخال رابط حساب Instagram",
+  "@mustBeInstagramUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLinkedinUser": "يجب إدخال رابط حساب Linkedin",
+  "@mustBeLinkedinUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeTwitterUser": "يجب إدخال رابط حساب Twitter",
+  "@mustBeTwitterUser": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeYoutubeUrl": "يجب إدخال رابط Youtube",
+  "@mustBeYoutubeUrl": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeFacbookPageOrProfile": "يجب إدخال رابط  Facbook",
+  "@mustBeFacbookPageOrProfile": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeSnapchatProfile": "يجب إدخال رابط حساب Snapchat",
+  "@mustBeSnapchatProfile": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustUrl": "يجب إدخال رابط صحيح",
+  "@mustUrl": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustEmail": "يجب إدخال بريد إلكتروني صحيح",
+  "@mustEmail": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBePhone": "يجب إدخال هاتف صحيح",
+  "@mustBePhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeHexColor": "يجب إدخال لون صحيح مثل (#ff0000)",
+  "@mustBeHexColor": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLocaleEgyptianPhone": "يجب إدخال رقم مصري محلي مثل (015xxxxxxxx)",
+  "@mustBeLocaleEgyptianPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInternationalEgyptianPhone": "يجب إدخال رقم مصري بالصيغة الدولية مثل (2015xxxxxxxx)",
+  "@mustBeInternationalEgyptianPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeLocaleKsaPhone":   "يجب إدخال رقم سعودي محلي مثل (05xxxxxxxx)",
+  "@mustBeLocaleKsaPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mustBeInternationalKsaPhone":  "يجب إدخال رقم سعودي بالصيغة الدولية مثل (96605xxxxxxxx)",
+  "@mustBeInternationalKsaPhone": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
 }
