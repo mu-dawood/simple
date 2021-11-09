@@ -1,6 +1,6 @@
 name: simple
 description: Collection of extension methods to make your code simple , clean and fast
-version: 2.1.4
+version: 2.1.5
 homepage: https://github.com/mo-ah-dawood/simple/tree/main/simple
 repository: https://github.com/mo-ah-dawood/simple
 issue_tracker: https://github.com/mo-ah-dawood/simple/issues
@@ -15,7 +15,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
-  simple_dart: ^1.1.0
+  simple_dart: ^1.1.1
+  validators: ^3.0.0
 
 
 dev_dependencies:

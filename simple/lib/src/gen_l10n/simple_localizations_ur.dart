@@ -98,9 +98,7 @@ class SimpleLocalizationsUr extends SimpleLocalizations {
   String get formatSeperator => ' ، ';
 
   @override
-  String required(dynamic value) {
-    return 'معذرت! اس کو پر کرنا ضروری ہے';
-  }
+  String get required => 'معذرت! اس کو پر کرنا ضروری ہے';
 
   @override
   String stringMaxLength(String value, int max) {
@@ -188,22 +186,22 @@ class SimpleLocalizationsUr extends SimpleLocalizations {
   }
 
   @override
-  String mustBeGitHubUser(String value) {
+  String mustBeGithubUrl(String value) {
     return 'آپ کو ایک Github اکاؤنٹ لنک درج کرنا ہوگا';
   }
 
   @override
-  String mustBeRedditUser(String value) {
+  String mustBeRedditUrl(String value) {
     return 'ریڈٹ اکاؤنٹ کا لنک درج ہونا ضروری ہے';
   }
 
   @override
-  String mustBeInstagramUser(String value) {
+  String mustBeInstagramUrl(String value) {
     return 'Instagram اکاؤنٹ کا لنک درج ہونا ضروری ہے';
   }
 
   @override
-  String mustBeLinkedinUser(String value) {
+  String mustBeLinkedinProfile(String value) {
     return 'لنکڈین اکاؤنٹ کا لنک درج ہونا ضروری ہے';
   }
 
@@ -213,7 +211,7 @@ class SimpleLocalizationsUr extends SimpleLocalizations {
   }
 
   @override
-  String mustBeYoutubeUrl(String value) {
+  String mustBeYoutubeVideoUrl(String value) {
     return 'یو ٹیوب لنک داخل ہونا ضروری ہے';
   }
 
@@ -228,18 +226,13 @@ class SimpleLocalizationsUr extends SimpleLocalizations {
   }
 
   @override
-  String mustUrl(String value) {
+  String mustBeUrl(String value) {
     return 'آپ کو ایک درست لنک درج کرنا ضروری ہے';
   }
 
   @override
-  String mustEmail(String value) {
+  String mustBeEmail(String value) {
     return 'آپ کو ایک درست ای میل درج کرنا ضروری ہے';
-  }
-
-  @override
-  String mustBePhone(String value) {
-    return 'آپ کو ایک درست فون درج کرنا ضروری ہے';
   }
 
   @override

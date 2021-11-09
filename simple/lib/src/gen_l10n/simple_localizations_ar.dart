@@ -98,9 +98,7 @@ class SimpleLocalizationsAr extends SimpleLocalizations {
   String get formatSeperator => ' ، ';
 
   @override
-  String required(dynamic value) {
-    return 'عذرا! هذا الحقل مطلوب';
-  }
+  String get required => 'عذرا! هذا الحقل مطلوب';
 
   @override
   String stringMaxLength(String value, int max) {
@@ -188,22 +186,22 @@ class SimpleLocalizationsAr extends SimpleLocalizations {
   }
 
   @override
-  String mustBeGitHubUser(String value) {
+  String mustBeGithubUrl(String value) {
     return 'يجب إدخال رابط حساب Github';
   }
 
   @override
-  String mustBeRedditUser(String value) {
+  String mustBeRedditUrl(String value) {
     return 'يجب إدخال رابط حساب Reddit';
   }
 
   @override
-  String mustBeInstagramUser(String value) {
+  String mustBeInstagramUrl(String value) {
     return 'يجب إدخال رابط حساب Instagram';
   }
 
   @override
-  String mustBeLinkedinUser(String value) {
+  String mustBeLinkedinProfile(String value) {
     return 'يجب إدخال رابط حساب Linkedin';
   }
 
@@ -213,8 +211,8 @@ class SimpleLocalizationsAr extends SimpleLocalizations {
   }
 
   @override
-  String mustBeYoutubeUrl(String value) {
-    return 'يجب إدخال رابط Youtube';
+  String mustBeYoutubeVideoUrl(String value) {
+    return 'يجب إدخال رابط لفيديو Youtube';
   }
 
   @override
@@ -228,18 +226,13 @@ class SimpleLocalizationsAr extends SimpleLocalizations {
   }
 
   @override
-  String mustUrl(String value) {
+  String mustBeUrl(String value) {
     return 'يجب إدخال رابط صحيح';
   }
 
   @override
-  String mustEmail(String value) {
+  String mustBeEmail(String value) {
     return 'يجب إدخال بريد إلكتروني صحيح';
-  }
-
-  @override
-  String mustBePhone(String value) {
-    return 'يجب إدخال هاتف صحيح';
   }
 
   @override

@@ -91,9 +91,7 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
   String get formatSeperator => ' , ';
 
   @override
-  String required(dynamic value) {
-    return 'Excuse me! This field is required';
-  }
+  String get required => 'Excuse me! This field is required';
 
   @override
   String stringMaxLength(String value, int max) {
@@ -181,22 +179,22 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
   }
 
   @override
-  String mustBeGitHubUser(String value) {
+  String mustBeGithubUrl(String value) {
     return 'You must enter a Github account link';
   }
 
   @override
-  String mustBeRedditUser(String value) {
+  String mustBeRedditUrl(String value) {
     return 'Reddit account link must be entered';
   }
 
   @override
-  String mustBeInstagramUser(String value) {
+  String mustBeInstagramUrl(String value) {
     return 'Instagram account link must be entered';
   }
 
   @override
-  String mustBeLinkedinUser(String value) {
+  String mustBeLinkedinProfile(String value) {
     return 'Linkedin account link must be entered';
   }
 
@@ -206,7 +204,7 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
   }
 
   @override
-  String mustBeYoutubeUrl(String value) {
+  String mustBeYoutubeVideoUrl(String value) {
     return 'Youtube link must be entered';
   }
 
@@ -221,18 +219,13 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
   }
 
   @override
-  String mustUrl(String value) {
+  String mustBeUrl(String value) {
     return 'You must enter a valid link';
   }
 
   @override
-  String mustEmail(String value) {
+  String mustBeEmail(String value) {
     return 'You must enter a valid email';
-  }
-
-  @override
-  String mustBePhone(String value) {
-    return 'You must enter a valid phone';
   }
 
   @override

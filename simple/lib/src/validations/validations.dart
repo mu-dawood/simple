@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:simple/src/gen_l10n/simple_localizations.dart';
 import 'package:simple/src/gen_l10n/simple_localizations_ar.dart';
 import 'package:simple_dart/simple_dart.dart';
+import 'package:validators/validators.dart';
 
 import '../string_extensions.dart';
 
+part 'feild_extensions.dart';
 part 'field_validator.dart';
 part 'validatation_messages.dart';
 part 'validation_messages_wrapper.dart';
@@ -13,14 +15,13 @@ extension ValidationExtensions on BuildContext {
   DefaultValidationMessages get messages => DefaultValidationMessages.of(this);
 
   /// Valiadate any form field
-  FieldValidator required() {
-    fn(dynamic value) {
-      if (value == null) return messages.required(value);
-      if (value is String && (value).trim().isEmpty)
-        return messages.required(value);
+  FieldValidator<T> required<T>() {
+    fn(T? value) {
+      if (value == null) return messages.required;
+      if (value is String && (value).trim().isEmpty) return messages.required;
     }
 
-    return FieldValidator._(fn);
+    return FieldValidator._(validate: fn, context: this);
   }
 
   FieldValidator<T> _validateIfExists<T>(String? Function(T v) validator) {
@@ -29,7 +30,7 @@ extension ValidationExtensions on BuildContext {
       return validator(value);
     }
 
-    return FieldValidator._(fn);
+    return FieldValidator._(validate: fn, context: this);
   }
 
   ///Valiadate TextFormField
@@ -53,8 +54,7 @@ extension ValidationExtensions on BuildContext {
     assert(min >= 0);
     assert(max > min);
     return _validateIfExists<String>((v) {
-      if (v.length < min || v.length > max)
-        return messages.stringMustBeInRange(v, min, max);
+      if (v.length < min || v.length > max) return messages.stringMustBeInRange(v, min, max);
     });
   }
 
@@ -83,8 +83,7 @@ extension ValidationExtensions on BuildContext {
   }
 
   /// Valiadate FormFields that has type of DateTime
-  FieldValidator<DateTime> isDateAfter(DateTime after,
-      [bool canBeSame = false]) {
+  FieldValidator<DateTime> isDateAfter(DateTime after, [bool canBeSame = false]) {
     return _validateIfExists<DateTime>((v) {
       if (canBeSame && v.isAtSameMomentAs(after)) return null;
       if (!v.isAfter(after)) return messages.mustBeDateAfter(v, after);
@@ -97,14 +96,12 @@ extension ValidationExtensions on BuildContext {
       var _date = v.toDate();
       if (_date == null) return messages.stringMustBeDateTime(v);
       if (canBeSame && _date.isAtSameMomentAs(before)) return null;
-      if (!_date.isBefore(before))
-        return messages.mustBeDateBefore(_date, before);
+      if (!_date.isBefore(before)) return messages.mustBeDateBefore(_date, before);
     });
   }
 
   /// Valiadate FormFields that has type of DateTime
-  FieldValidator<DateTime> isDateBefore(DateTime before,
-      [bool canBeSame = false]) {
+  FieldValidator<DateTime> isDateBefore(DateTime before, [bool canBeSame = false]) {
     return _validateIfExists<DateTime>((v) {
       if (canBeSame && v.isAtSameMomentAs(before)) return null;
       if (!v.isBefore(before)) return messages.mustBeDateBefore(v, before);
@@ -117,8 +114,7 @@ extension ValidationExtensions on BuildContext {
     return _validateIfExists<String>((v) {
       var _date = v.toDate();
       if (_date == null) return messages.stringMustBeDateTime(v);
-      if (_date.isBefore(min) || _date.isAfter(max))
-        return messages.mustBeDateBetween(_date, min, max);
+      if (_date.isBefore(min) || _date.isAfter(max)) return messages.mustBeDateBetween(_date, min, max);
     });
   }
 
@@ -126,14 +122,12 @@ extension ValidationExtensions on BuildContext {
   FieldValidator<DateTime> isDateBetween(DateTime min, DateTime max) {
     assert(min.isBefore(max));
     return _validateIfExists<DateTime>((v) {
-      if (v.isBefore(min) || v.isAfter(max))
-        return messages.mustBeDateBetween(v, min, max);
+      if (v.isBefore(min) || v.isAfter(max)) return messages.mustBeDateBetween(v, min, max);
     });
   }
 
   /// Valiadate TextFormField
-  FieldValidator<String> timeOfDayAfter(TimeOfDay after,
-      [bool canBeSame = false]) {
+  FieldValidator<String> timeOfDayAfter(TimeOfDay after, [bool canBeSame = false]) {
     return _validateIfExists<String>((v) {
       var time = v.toTimeOfDay();
       if (time == null) return messages.stringMustBeTimeOfDay(v);
@@ -145,8 +139,7 @@ extension ValidationExtensions on BuildContext {
   }
 
   /// Valiadate FormFields that has type of TimeOfDay
-  FieldValidator<TimeOfDay> isTimeOfDayAfter(TimeOfDay after,
-      [bool canBeSame = false]) {
+  FieldValidator<TimeOfDay> isTimeOfDayAfter(TimeOfDay after, [bool canBeSame = false]) {
     return _validateIfExists<TimeOfDay>((v) {
       var _time = v.hour * 60 + v.minute;
       var _after = after.hour * 60 + after.minute;
@@ -156,8 +149,7 @@ extension ValidationExtensions on BuildContext {
   }
 
   /// Valiadate TextFormField
-  FieldValidator<String> timeOfDayBefore(TimeOfDay before,
-      [bool canBeSame = false]) {
+  FieldValidator<String> timeOfDayBefore(TimeOfDay before, [bool canBeSame = false]) {
     return _validateIfExists<String>((v) {
       var time = v.toTimeOfDay();
       if (time == null) return messages.stringMustBeTimeOfDay(v);
@@ -169,8 +161,7 @@ extension ValidationExtensions on BuildContext {
   }
 
   /// Valiadate FormFields that has type of TimeOfDay
-  FieldValidator<TimeOfDay> isTimeOfDayBefore(TimeOfDay before,
-      [bool canBeSame = false]) {
+  FieldValidator<TimeOfDay> isTimeOfDayBefore(TimeOfDay before, [bool canBeSame = false]) {
     return _validateIfExists<TimeOfDay>((v) {
       var _time = v.hour * 60 + v.minute;
       var _before = before.hour * 60 + before.minute;
@@ -187,8 +178,7 @@ extension ValidationExtensions on BuildContext {
       var _time = time.hour * 60 + time.minute;
       var _min = min.hour * 60 + min.minute;
       var _max = max.hour * 60 + max.minute;
-      if (_time < _min || _time > _max)
-        return messages.mustBeTimeOfDayBetween(time, min, max);
+      if (_time < _min || _time > _max) return messages.mustBeTimeOfDayBetween(time, min, max);
     });
   }
 
@@ -198,8 +188,7 @@ extension ValidationExtensions on BuildContext {
       var _time = v.hour * 60 + v.minute;
       var _min = min.hour * 60 + min.minute;
       var _max = max.hour * 60 + max.minute;
-      if (_time < _min || _time > _max)
-        return messages.mustBeTimeOfDayBetween(v, min, max);
+      if (_time < _min || _time > _max) return messages.mustBeTimeOfDayBetween(v, min, max);
     });
   }
 
@@ -227,99 +216,116 @@ extension ValidationExtensions on BuildContext {
     });
   }
 
-  /// Valiadate TextFormField
-  FieldValidator<String> gitHubUser() {
+  /// Valiadate TextFormField user
+  FieldValidator<String> url({
+    List<String> protocols = const ['http', 'https', 'ftp'],
+    bool requireTld = true,
+    bool requireProtocol = false,
+    bool allowUnderscore = false,
+    List<String> hostWhitelist = const [],
+    List<String> hostBlacklist = const [],
+  }) {
     return _validateIfExists<String>((v) {
-      if (!v.isGitHubUser) return messages.mustBeGitHubUser(v);
+      if (!isURL(
+        v,
+        protocols: protocols,
+        requireProtocol: requireProtocol,
+        allowUnderscore: allowUnderscore,
+        hostBlacklist: hostBlacklist,
+        hostWhitelist: hostWhitelist,
+        requireTld: requireTld,
+      )) return messages.mustBeUrl(v);
     });
   }
 
   /// Valiadate TextFormField
-  FieldValidator<String> redditUser() {
+  FieldValidator<String> email() {
     return _validateIfExists<String>((v) {
-      if (!v.isRedditUser) return messages.mustBeRedditUser(v);
+      if (!isEmail(v)) return messages.mustBeEmail(v);
     });
   }
 
   /// Valiadate TextFormField
-  FieldValidator<String> instagramUser() {
+  FieldValidator<String> hexColor() {
     return _validateIfExists<String>((v) {
-      if (!v.isInstagramUser) return messages.mustBeInstagramUser(v);
+      if (!isHexColor(v)) return messages.mustBeHexColor(v);
     });
   }
 
   /// Valiadate TextFormField
-  FieldValidator<String> linkedinUser() {
+  FieldValidator<String> localeEgyptianPhone() {
     return _validateIfExists<String>((v) {
-      if (!v.isLinkedinUser) return messages.mustBeLinkedinUser(v);
+      if (!v.isLocaleEgyptianPhone) return messages.mustBeLocaleEgyptianPhone(v);
     });
   }
 
   /// Valiadate TextFormField
-  FieldValidator<String> twitterUser() {
+  FieldValidator<String> internationalEgyptianPhone() {
     return _validateIfExists<String>((v) {
-      if (!v.isTwitterUser) return messages.mustBeTwitterUser(v);
+      if (!v.isInternationalEgyptianPhone) return messages.mustBeInternationalEgyptianPhone(v);
     });
   }
 
   /// Valiadate TextFormField
-  FieldValidator<String> youtubeUrl() {
+  FieldValidator<String> localeKsaPhone() {
     return _validateIfExists<String>((v) {
-      if (!v.isYoutubeUrl) return messages.mustBeYoutubeUrl(v);
+      if (!v.isLocaleKsaPhone) return messages.mustBeLocaleKsaPhone(v);
     });
   }
 
   /// Valiadate TextFormField
-  FieldValidator<String> facbookPageOrProfile() {
+  FieldValidator<String> internationalKsaPhone() {
     return _validateIfExists<String>((v) {
-      if (!v.isFacbookPageOrProfile)
-        return messages.mustBeFacbookPageOrProfile(v);
+      if (!v.isInternationalKsaPhone) return messages.mustBeInternationalKsaPhone(v);
     });
   }
 
   /// Valiadate TextFormField
-  FieldValidator<String> facbookPageOrProfile() {
+  FieldValidator<String> githubUrl({String? user, String? repositry}) {
     return _validateIfExists<String>((v) {
-      if (!v.isFacbookPageOrProfile)
-        return messages.mustBeFacbookPageOrProfile(v);
+      if (!v.isGitHubUrl(user: user, repositry: repositry)) return messages.mustBeGithubUrl(v);
     });
   }
 
-  // /// works for String
+  /// Valiadate TextFormField
+  FieldValidator<String> redditUrl([String? user]) {
+    return _validateIfExists<String>((v) {
+      if (!v.isRedditUrl(user: user)) return messages.mustBeRedditUrl(v);
+    });
+  }
 
-  // final String Function(String value)? mustBeFacbookPageOrProfile;
+  /// Valiadate TextFormField
+  FieldValidator<String> instagramUrl([String? user]) {
+    return _validateIfExists<String>((v) {
+      if (!v.isInstagramUrl(user: user)) return messages.mustBeInstagramUrl(v);
+    });
+  }
 
-  // /// works for String
+  /// Valiadate TextFormField
+  FieldValidator<String> linkedinProfileUrl([String? permalink]) {
+    return _validateIfExists<String>((v) {
+      if (!v.isLinkedInProfile(permalink: permalink)) return messages.mustBeLinkedinProfile(v);
+    });
+  }
 
-  // final String Function(String value)? mustBeSnapchatProfile;
+  /// Valiadate TextFormField
+  FieldValidator<String> twitterUserUrl([String? userName]) {
+    return _validateIfExists<String>((v) {
+      if (!v.isTwitterUserUrl(userName: userName)) return messages.mustBeTwitterUser(v);
+    });
+  }
 
-  // /// works for String
+  /// Valiadate TextFormField
+  FieldValidator<String> youtubeUrl([String? id]) {
+    return _validateIfExists<String>((v) {
+      if (!v.isYoutubeVideoUrl(id: id)) return messages.mustBeYoutubeVideoUrl(v);
+    });
+  }
 
-  // final String Function(String value)? mustUrl;
-
-  // /// works for String
-
-  // final String Function(String value)? mustEmail;
-
-  // /// works for String
-
-  // final String Function(String value)? mustBePhone;
-
-  // /// works for String
-
-  // final String Function(String value)? mustBeHexColor;
-
-  // /// works for String
-
-  // final String Function(String value)? mustBeLocaleEgyptianPhone;
-
-  // /// works for String
-
-  // final String Function(String value)? mustBeInternationalEgyptianPhone;
-
-  // final String Function(String value)? mustBeLocaleKsaPhone;
-
-  // /// works for String
-
-  // final String Function(String value)? mustBeInternationalKsaPhone;
+  /// Valiadate TextFormField
+  FieldValidator<String> snapchatProfileUrl([String? user]) {
+    return _validateIfExists<String>((v) {
+      if (!v.isSnapchatUrl(user: user)) return messages.mustBeSnapchatProfile(v);
+    });
+  }
 }

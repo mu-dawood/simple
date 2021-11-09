@@ -1,28 +1,20 @@
 part of 'validations.dart';
 
 class ValidationMessagesConfig extends StatefulWidget {
-  final ValidationMessages messages;
+  final ValidationMessages Function(BuildContext context) messages;
   final Widget child;
-  const ValidationMessagesConfig(
-      {Key? key, required this.messages, required this.child})
-      : super(key: key);
+  const ValidationMessagesConfig({Key? key, required this.messages, required this.child}) : super(key: key);
 
   @override
-  _ValidationMessagesConfigState createState() =>
-      _ValidationMessagesConfigState();
+  _ValidationMessagesConfigState createState() => _ValidationMessagesConfigState();
 
-  static ValidationMessages? of(BuildContext context) => context
-      .findRootAncestorStateOfType<_ValidationMessagesConfigState>()
-      ?._messages;
+  static ValidationMessages? of(BuildContext context) => context.findRootAncestorStateOfType<_ValidationMessagesConfigState>()?._messages(context);
 }
 
 class _ValidationMessagesConfigState extends State<ValidationMessagesConfig> {
-  late ValidationMessages _messages;
-  @override
-  void didChangeDependencies() {
+  ValidationMessages _messages(BuildContext context) {
     var perent = ValidationMessagesConfig.of(context);
-    _messages = perent?.withOther(widget.messages) ?? widget.messages;
-    super.didChangeDependencies();
+    return perent?.withOther(widget.messages(context)) ?? widget.messages(context);
   }
 
   @override

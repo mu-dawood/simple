@@ -53,7 +53,7 @@ void main() {
     expect("https://angel.co/company/twitter".angelCompany?.company, "twitter");
     expect(
         "https://angel.co/company/twitter/test".angelCompany?.subpage, "test");
-    expect("https://angel.co/company/twitter".isAngelCompaney(), true);
+    expect("https://angel.co/company/twitter".isAngelCompany(), true);
     expect(
         "https://angel.co/company/twitter/jobs/576275-engineering-manager"
             .isAngelJob(),

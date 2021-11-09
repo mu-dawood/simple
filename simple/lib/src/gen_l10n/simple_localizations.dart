@@ -156,7 +156,7 @@ abstract class SimpleLocalizations {
   ///
   /// In ar, this message translates to:
   /// **'عذرا! هذا الحقل مطلوب'**
-  String required(dynamic value);
+  String get required;
 
   /// No description provided for @stringMaxLength.
   ///
@@ -242,29 +242,29 @@ abstract class SimpleLocalizations {
   /// **'يجب إدخال رقم عشري'**
   String mustBeDecimal(String value);
 
-  /// No description provided for @mustBeGitHubUser.
+  /// No description provided for @mustBeGithubUrl.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال رابط حساب Github'**
-  String mustBeGitHubUser(String value);
+  String mustBeGithubUrl(String value);
 
-  /// No description provided for @mustBeRedditUser.
+  /// No description provided for @mustBeRedditUrl.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال رابط حساب Reddit'**
-  String mustBeRedditUser(String value);
+  String mustBeRedditUrl(String value);
 
-  /// No description provided for @mustBeInstagramUser.
+  /// No description provided for @mustBeInstagramUrl.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال رابط حساب Instagram'**
-  String mustBeInstagramUser(String value);
+  String mustBeInstagramUrl(String value);
 
-  /// No description provided for @mustBeLinkedinUser.
+  /// No description provided for @mustBeLinkedinProfile.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال رابط حساب Linkedin'**
-  String mustBeLinkedinUser(String value);
+  String mustBeLinkedinProfile(String value);
 
   /// No description provided for @mustBeTwitterUser.
   ///
@@ -272,11 +272,11 @@ abstract class SimpleLocalizations {
   /// **'يجب إدخال رابط حساب Twitter'**
   String mustBeTwitterUser(String value);
 
-  /// No description provided for @mustBeYoutubeUrl.
+  /// No description provided for @mustBeYoutubeVideoUrl.
   ///
   /// In ar, this message translates to:
-  /// **'يجب إدخال رابط Youtube'**
-  String mustBeYoutubeUrl(String value);
+  /// **'يجب إدخال رابط لفيديو Youtube'**
+  String mustBeYoutubeVideoUrl(String value);
 
   /// No description provided for @mustBeFacbookPageOrProfile.
   ///
@@ -290,23 +290,17 @@ abstract class SimpleLocalizations {
   /// **'يجب إدخال رابط حساب Snapchat'**
   String mustBeSnapchatProfile(String value);
 
-  /// No description provided for @mustUrl.
+  /// No description provided for @mustBeUrl.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال رابط صحيح'**
-  String mustUrl(String value);
+  String mustBeUrl(String value);
 
-  /// No description provided for @mustEmail.
+  /// No description provided for @mustBeEmail.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال بريد إلكتروني صحيح'**
-  String mustEmail(String value);
-
-  /// No description provided for @mustBePhone.
-  ///
-  /// In ar, this message translates to:
-  /// **'يجب إدخال هاتف صحيح'**
-  String mustBePhone(String value);
+  String mustBeEmail(String value);
 
   /// No description provided for @mustBeHexColor.
   ///

@@ -2,7 +2,7 @@ part of 'validations.dart';
 
 class ValidationMessages {
   /// works for any type
-  final String Function(dynamic value)? required;
+  final String? required;
 
   /// works for String
 
@@ -32,8 +32,7 @@ class ValidationMessages {
   final String Function(DateTime value, DateTime before)? mustBeDateBefore;
 
   /// works for String and DateTime
-  final String Function(DateTime value, DateTime min, DateTime max)?
-      mustBeDateBetween;
+  final String Function(DateTime value, DateTime min, DateTime max)? mustBeDateBetween;
 
   /// works for String and TimeOfDay
 
@@ -41,13 +40,11 @@ class ValidationMessages {
 
   /// works for String and TimeOfDay
 
-  final String Function(TimeOfDay value, TimeOfDay before)?
-      mustBeTimeOfDayBefore;
+  final String Function(TimeOfDay value, TimeOfDay before)? mustBeTimeOfDayBefore;
 
   /// works for String and TimeOfDay
 
-  final String Function(TimeOfDay value, TimeOfDay min, TimeOfDay max)?
-      mustBeTimeOfDayBetween;
+  final String Function(TimeOfDay value, TimeOfDay min, TimeOfDay max)? mustBeTimeOfDayBetween;
 
   /// works for String
 
@@ -62,19 +59,19 @@ class ValidationMessages {
 
   /// works for String
 
-  final String Function(String value)? mustBeGitHubUser;
+  final String Function(String value)? mustBeGithubUrl;
 
   /// works for String
 
-  final String Function(String value)? mustBeRedditUser;
+  final String Function(String value)? mustBeRedditUrl;
 
   /// works for String
 
-  final String Function(String value)? mustBeInstagramUser;
+  final String Function(String value)? mustBeInstagramUrl;
 
   /// works for String
 
-  final String Function(String value)? mustBeLinkedinUser;
+  final String Function(String value)? mustBeLinkedinProfile;
 
   /// works for String
 
@@ -82,7 +79,7 @@ class ValidationMessages {
 
   /// works for String
 
-  final String Function(String value)? mustBeYoutubeUrl;
+  final String Function(String value)? mustBeYoutubeVideoUrl;
 
   /// works for String
 
@@ -94,15 +91,11 @@ class ValidationMessages {
 
   /// works for String
 
-  final String Function(String value)? mustUrl;
+  final String Function(String value)? mustBeUrl;
 
   /// works for String
 
-  final String Function(String value)? mustEmail;
-
-  /// works for String
-
-  final String Function(String value)? mustBePhone;
+  final String Function(String value)? mustBeEmail;
 
   /// works for String
 
@@ -138,17 +131,16 @@ class ValidationMessages {
     this.mustBeNumber,
     this.mustBeInteger,
     this.mustBeDecimal,
-    this.mustBeGitHubUser,
-    this.mustBeRedditUser,
-    this.mustBeInstagramUser,
-    this.mustBeLinkedinUser,
+    this.mustBeGithubUrl,
+    this.mustBeRedditUrl,
+    this.mustBeInstagramUrl,
+    this.mustBeLinkedinProfile,
     this.mustBeTwitterUser,
-    this.mustBeYoutubeUrl,
+    this.mustBeYoutubeVideoUrl,
     this.mustBeFacbookPageOrProfile,
     this.mustBeSnapchatProfile,
-    this.mustUrl,
-    this.mustEmail,
-    this.mustBePhone,
+    this.mustBeUrl,
+    this.mustBeEmail,
     this.mustBeHexColor,
     this.mustBeLocaleEgyptianPhone,
     this.mustBeInternationalEgyptianPhone,
@@ -159,57 +151,42 @@ class ValidationMessages {
   ValidationMessages withOther(ValidationMessages? values) {
     return ValidationMessages(
       mustBeDateBetween: values?.mustBeDateBetween ?? this.mustBeDateBetween,
-      mustBeTimeOfDayBetween:
-          values?.mustBeTimeOfDayBetween ?? this.mustBeTimeOfDayBetween,
+      mustBeTimeOfDayBetween: values?.mustBeTimeOfDayBetween ?? this.mustBeTimeOfDayBetween,
       required: values?.required ?? this.required,
       stringMaxLength: values?.stringMaxLength ?? this.stringMaxLength,
       stringMinLength: values?.stringMinLength ?? this.stringMinLength,
-      stringMustBeInRange:
-          values?.stringMustBeInRange ?? this.stringMustBeInRange,
-      stringMustBeDateTime:
-          values?.stringMustBeDateTime ?? this.stringMustBeDateTime,
-      stringMustBeTimeOfDay:
-          values?.stringMustBeTimeOfDay ?? this.stringMustBeTimeOfDay,
+      stringMustBeInRange: values?.stringMustBeInRange ?? this.stringMustBeInRange,
+      stringMustBeDateTime: values?.stringMustBeDateTime ?? this.stringMustBeDateTime,
+      stringMustBeTimeOfDay: values?.stringMustBeTimeOfDay ?? this.stringMustBeTimeOfDay,
       mustBeDateAfter: values?.mustBeDateAfter ?? this.mustBeDateAfter,
       mustBeDateBefore: values?.mustBeDateBefore ?? this.mustBeDateBefore,
-      mustBeTimeOfDayAfter:
-          values?.mustBeTimeOfDayAfter ?? this.mustBeTimeOfDayAfter,
-      mustBeTimeOfDayBefore:
-          values?.mustBeTimeOfDayBefore ?? this.mustBeTimeOfDayBefore,
+      mustBeTimeOfDayAfter: values?.mustBeTimeOfDayAfter ?? this.mustBeTimeOfDayAfter,
+      mustBeTimeOfDayBefore: values?.mustBeTimeOfDayBefore ?? this.mustBeTimeOfDayBefore,
       mustBeNumber: values?.mustBeNumber ?? this.mustBeNumber,
       mustBeInteger: values?.mustBeInteger ?? this.mustBeInteger,
       mustBeDecimal: values?.mustBeDecimal ?? this.mustBeDecimal,
-      mustBeGitHubUser: values?.mustBeGitHubUser ?? this.mustBeGitHubUser,
-      mustBeRedditUser: values?.mustBeRedditUser ?? this.mustBeRedditUser,
-      mustBeInstagramUser:
-          values?.mustBeInstagramUser ?? this.mustBeInstagramUser,
-      mustBeLinkedinUser: values?.mustBeLinkedinUser ?? this.mustBeLinkedinUser,
+      mustBeGithubUrl: values?.mustBeGithubUrl ?? this.mustBeGithubUrl,
+      mustBeRedditUrl: values?.mustBeRedditUrl ?? this.mustBeRedditUrl,
+      mustBeInstagramUrl: values?.mustBeInstagramUrl ?? this.mustBeInstagramUrl,
+      mustBeLinkedinProfile: values?.mustBeLinkedinProfile ?? this.mustBeLinkedinProfile,
       mustBeTwitterUser: values?.mustBeTwitterUser ?? this.mustBeTwitterUser,
-      mustBeYoutubeUrl: values?.mustBeYoutubeUrl ?? this.mustBeYoutubeUrl,
-      mustBeFacbookPageOrProfile:
-          values?.mustBeFacbookPageOrProfile ?? this.mustBeFacbookPageOrProfile,
-      mustBeSnapchatProfile:
-          values?.mustBeSnapchatProfile ?? this.mustBeSnapchatProfile,
-      mustUrl: values?.mustUrl ?? this.mustUrl,
-      mustEmail: values?.mustEmail ?? this.mustEmail,
-      mustBePhone: values?.mustBePhone ?? this.mustBePhone,
+      mustBeYoutubeVideoUrl: values?.mustBeYoutubeVideoUrl ?? this.mustBeYoutubeVideoUrl,
+      mustBeFacbookPageOrProfile: values?.mustBeFacbookPageOrProfile ?? this.mustBeFacbookPageOrProfile,
+      mustBeSnapchatProfile: values?.mustBeSnapchatProfile ?? this.mustBeSnapchatProfile,
+      mustBeUrl: values?.mustBeUrl ?? this.mustBeUrl,
+      mustBeEmail: values?.mustBeEmail ?? this.mustBeEmail,
       mustBeHexColor: values?.mustBeHexColor ?? this.mustBeHexColor,
-      mustBeLocaleEgyptianPhone:
-          values?.mustBeLocaleEgyptianPhone ?? this.mustBeLocaleEgyptianPhone,
-      mustBeInternationalEgyptianPhone:
-          values?.mustBeInternationalEgyptianPhone ??
-              this.mustBeInternationalEgyptianPhone,
-      mustBeLocaleKsaPhone:
-          values?.mustBeLocaleKsaPhone ?? this.mustBeLocaleKsaPhone,
-      mustBeInternationalKsaPhone: values?.mustBeInternationalKsaPhone ??
-          this.mustBeInternationalKsaPhone,
+      mustBeLocaleEgyptianPhone: values?.mustBeLocaleEgyptianPhone ?? this.mustBeLocaleEgyptianPhone,
+      mustBeInternationalEgyptianPhone: values?.mustBeInternationalEgyptianPhone ?? this.mustBeInternationalEgyptianPhone,
+      mustBeLocaleKsaPhone: values?.mustBeLocaleKsaPhone ?? this.mustBeLocaleKsaPhone,
+      mustBeInternationalKsaPhone: values?.mustBeInternationalKsaPhone ?? this.mustBeInternationalKsaPhone,
     );
   }
 }
 
 class DefaultValidationMessages extends ValidationMessages {
   /// works for any type
-  final String Function(dynamic value) required;
+  final String? required;
 
   /// works for String
 
@@ -239,8 +216,7 @@ class DefaultValidationMessages extends ValidationMessages {
   final String Function(DateTime value, DateTime before) mustBeDateBefore;
 
   /// works for String and DateTime
-  final String Function(DateTime value, DateTime min, DateTime max)
-      mustBeDateBetween;
+  final String Function(DateTime value, DateTime min, DateTime max) mustBeDateBetween;
 
   /// works for String and TimeOfDay
 
@@ -248,13 +224,11 @@ class DefaultValidationMessages extends ValidationMessages {
 
   /// works for String and TimeOfDay
 
-  final String Function(TimeOfDay value, TimeOfDay before)
-      mustBeTimeOfDayBefore;
+  final String Function(TimeOfDay value, TimeOfDay before) mustBeTimeOfDayBefore;
 
   /// works for String and TimeOfDay
 
-  final String Function(TimeOfDay value, TimeOfDay min, TimeOfDay max)
-      mustBeTimeOfDayBetween;
+  final String Function(TimeOfDay value, TimeOfDay min, TimeOfDay max) mustBeTimeOfDayBetween;
 
   /// works for String
 
@@ -269,19 +243,19 @@ class DefaultValidationMessages extends ValidationMessages {
 
   /// works for String
 
-  final String Function(String value) mustBeGitHubUser;
+  final String Function(String value) mustBeGithubUrl;
 
   /// works for String
 
-  final String Function(String value) mustBeRedditUser;
+  final String Function(String value) mustBeRedditUrl;
 
   /// works for String
 
-  final String Function(String value) mustBeInstagramUser;
+  final String Function(String value) mustBeInstagramUrl;
 
   /// works for String
 
-  final String Function(String value) mustBeLinkedinUser;
+  final String Function(String value) mustBeLinkedinProfile;
 
   /// works for String
 
@@ -289,7 +263,7 @@ class DefaultValidationMessages extends ValidationMessages {
 
   /// works for String
 
-  final String Function(String value) mustBeYoutubeUrl;
+  final String Function(String value) mustBeYoutubeVideoUrl;
 
   /// works for String
 
@@ -301,15 +275,11 @@ class DefaultValidationMessages extends ValidationMessages {
 
   /// works for String
 
-  final String Function(String value) mustUrl;
+  final String Function(String value) mustBeUrl;
 
   /// works for String
 
-  final String Function(String value) mustEmail;
-
-  /// works for String
-
-  final String Function(String value) mustBePhone;
+  final String Function(String value) mustBeEmail;
 
   /// works for String
 
@@ -345,17 +315,16 @@ class DefaultValidationMessages extends ValidationMessages {
     required this.mustBeNumber,
     required this.mustBeInteger,
     required this.mustBeDecimal,
-    required this.mustBeGitHubUser,
-    required this.mustBeRedditUser,
-    required this.mustBeInstagramUser,
-    required this.mustBeLinkedinUser,
+    required this.mustBeGithubUrl,
+    required this.mustBeRedditUrl,
+    required this.mustBeInstagramUrl,
+    required this.mustBeLinkedinProfile,
     required this.mustBeTwitterUser,
-    required this.mustBeYoutubeUrl,
+    required this.mustBeYoutubeVideoUrl,
     required this.mustBeFacbookPageOrProfile,
     required this.mustBeSnapchatProfile,
-    required this.mustUrl,
-    required this.mustEmail,
-    required this.mustBePhone,
+    required this.mustBeUrl,
+    required this.mustBeEmail,
     required this.mustBeHexColor,
     required this.mustBeLocaleEgyptianPhone,
     required this.mustBeInternationalEgyptianPhone,
@@ -368,50 +337,35 @@ class DefaultValidationMessages extends ValidationMessages {
     var tr = SimpleLocalizations.of(context) ?? SimpleLocalizationsAr();
     return DefaultValidationMessages(
       mustBeDateBetween: values?.mustBeDateBetween ?? tr.mustBeDateBetween,
-      mustBeTimeOfDayBetween:
-          values?.mustBeTimeOfDayBetween ?? tr.mustBeTimeOfDayBetween,
+      mustBeTimeOfDayBetween: values?.mustBeTimeOfDayBetween ?? tr.mustBeTimeOfDayBetween,
       required: values?.required ?? tr.required,
       stringMaxLength: values?.stringMaxLength ?? tr.stringMaxLength,
       stringMinLength: values?.stringMinLength ?? tr.stringMinLength,
-      stringMustBeInRange:
-          values?.stringMustBeInRange ?? tr.stringMustBeInRange,
-      stringMustBeDateTime:
-          values?.stringMustBeDateTime ?? tr.stringMustBeDateTime,
-      stringMustBeTimeOfDay:
-          values?.stringMustBeTimeOfDay ?? tr.stringMustBeTimeOfDay,
+      stringMustBeInRange: values?.stringMustBeInRange ?? tr.stringMustBeInRange,
+      stringMustBeDateTime: values?.stringMustBeDateTime ?? tr.stringMustBeDateTime,
+      stringMustBeTimeOfDay: values?.stringMustBeTimeOfDay ?? tr.stringMustBeTimeOfDay,
       mustBeDateAfter: values?.mustBeDateAfter ?? tr.mustBeDateAfter,
       mustBeDateBefore: values?.mustBeDateBefore ?? tr.mustBeDateBefore,
-      mustBeTimeOfDayAfter:
-          values?.mustBeTimeOfDayAfter ?? tr.mustBeTimeOfDayAfter,
-      mustBeTimeOfDayBefore:
-          values?.mustBeTimeOfDayBefore ?? tr.mustBeTimeOfDayBefore,
+      mustBeTimeOfDayAfter: values?.mustBeTimeOfDayAfter ?? tr.mustBeTimeOfDayAfter,
+      mustBeTimeOfDayBefore: values?.mustBeTimeOfDayBefore ?? tr.mustBeTimeOfDayBefore,
       mustBeNumber: values?.mustBeNumber ?? tr.mustBeNumber,
       mustBeInteger: values?.mustBeInteger ?? tr.mustBeInteger,
       mustBeDecimal: values?.mustBeDecimal ?? tr.mustBeDecimal,
-      mustBeGitHubUser: values?.mustBeGitHubUser ?? tr.mustBeGitHubUser,
-      mustBeRedditUser: values?.mustBeRedditUser ?? tr.mustBeRedditUser,
-      mustBeInstagramUser:
-          values?.mustBeInstagramUser ?? tr.mustBeInstagramUser,
-      mustBeLinkedinUser: values?.mustBeLinkedinUser ?? tr.mustBeLinkedinUser,
+      mustBeGithubUrl: values?.mustBeGithubUrl ?? tr.mustBeGithubUrl,
+      mustBeRedditUrl: values?.mustBeRedditUrl ?? tr.mustBeRedditUrl,
+      mustBeInstagramUrl: values?.mustBeInstagramUrl ?? tr.mustBeInstagramUrl,
+      mustBeLinkedinProfile: values?.mustBeLinkedinProfile ?? tr.mustBeLinkedinProfile,
       mustBeTwitterUser: values?.mustBeTwitterUser ?? tr.mustBeTwitterUser,
-      mustBeYoutubeUrl: values?.mustBeYoutubeUrl ?? tr.mustBeYoutubeUrl,
-      mustBeFacbookPageOrProfile:
-          values?.mustBeFacbookPageOrProfile ?? tr.mustBeFacbookPageOrProfile,
-      mustBeSnapchatProfile:
-          values?.mustBeSnapchatProfile ?? tr.mustBeSnapchatProfile,
-      mustUrl: values?.mustUrl ?? tr.mustUrl,
-      mustEmail: values?.mustEmail ?? tr.mustEmail,
-      mustBePhone: values?.mustBePhone ?? tr.mustBePhone,
+      mustBeYoutubeVideoUrl: values?.mustBeYoutubeVideoUrl ?? tr.mustBeYoutubeVideoUrl,
+      mustBeFacbookPageOrProfile: values?.mustBeFacbookPageOrProfile ?? tr.mustBeFacbookPageOrProfile,
+      mustBeSnapchatProfile: values?.mustBeSnapchatProfile ?? tr.mustBeSnapchatProfile,
+      mustBeUrl: values?.mustBeUrl ?? tr.mustBeUrl,
+      mustBeEmail: values?.mustBeEmail ?? tr.mustBeEmail,
       mustBeHexColor: values?.mustBeHexColor ?? tr.mustBeHexColor,
-      mustBeLocaleEgyptianPhone:
-          values?.mustBeLocaleEgyptianPhone ?? tr.mustBeLocaleEgyptianPhone,
-      mustBeInternationalEgyptianPhone:
-          values?.mustBeInternationalEgyptianPhone ??
-              tr.mustBeInternationalEgyptianPhone,
-      mustBeLocaleKsaPhone:
-          values?.mustBeLocaleKsaPhone ?? tr.mustBeLocaleKsaPhone,
-      mustBeInternationalKsaPhone:
-          values?.mustBeInternationalKsaPhone ?? tr.mustBeInternationalKsaPhone,
+      mustBeLocaleEgyptianPhone: values?.mustBeLocaleEgyptianPhone ?? tr.mustBeLocaleEgyptianPhone,
+      mustBeInternationalEgyptianPhone: values?.mustBeInternationalEgyptianPhone ?? tr.mustBeInternationalEgyptianPhone,
+      mustBeLocaleKsaPhone: values?.mustBeLocaleKsaPhone ?? tr.mustBeLocaleKsaPhone,
+      mustBeInternationalKsaPhone: values?.mustBeInternationalKsaPhone ?? tr.mustBeInternationalKsaPhone,
     );
   }
 }

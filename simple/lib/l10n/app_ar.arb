@@ -44,13 +44,6 @@
   "now": "الآن",
   "formatSeperator": " ، ",
   "required": "عذرا! هذا الحقل مطلوب",
-  "@required": {
-    "placeholders": {
-      "value": {
-        "type": "dynamic"
-      }
-    }
-  },
   "stringMaxLength": "يجب أن لا يزيد طول النص عن {max}",
   "@stringMaxLength": {
     "placeholders": {
@@ -205,32 +198,32 @@
       }
     }
   },
-  "mustBeGitHubUser": "يجب إدخال رابط حساب Github",
-  "@mustBeGitHubUser": {
+  "mustBeGithubUrl": "يجب إدخال رابط حساب Github",
+  "@mustBeGithubUrl": {
     "placeholders": {
       "value": {
         "type": "String"
       }
     }
   },
-  "mustBeRedditUser": "يجب إدخال رابط حساب Reddit",
-  "@mustBeRedditUser": {
+  "mustBeRedditUrl": "يجب إدخال رابط حساب Reddit",
+  "@mustBeRedditUrl": {
     "placeholders": {
       "value": {
         "type": "String"
       }
     }
   },
-  "mustBeInstagramUser": "يجب إدخال رابط حساب Instagram",
-  "@mustBeInstagramUser": {
+  "mustBeInstagramUrl": "يجب إدخال رابط حساب Instagram",
+  "@mustBeInstagramUrl": {
     "placeholders": {
       "value": {
         "type": "String"
       }
     }
   },
-  "mustBeLinkedinUser": "يجب إدخال رابط حساب Linkedin",
-  "@mustBeLinkedinUser": {
+  "mustBeLinkedinProfile": "يجب إدخال رابط حساب Linkedin",
+  "@mustBeLinkedinProfile": {
     "placeholders": {
       "value": {
         "type": "String"
@@ -245,8 +238,8 @@
       }
     }
   },
-  "mustBeYoutubeUrl": "يجب إدخال رابط Youtube",
-  "@mustBeYoutubeUrl": {
+  "mustBeYoutubeVideoUrl": "يجب إدخال رابط لفيديو Youtube",
+  "@mustBeYoutubeVideoUrl": {
     "placeholders": {
       "value": {
         "type": "String"
@@ -269,24 +262,16 @@
       }
     }
   },
-  "mustUrl": "يجب إدخال رابط صحيح",
-  "@mustUrl": {
+  "mustBeUrl": "يجب إدخال رابط صحيح",
+  "@mustBeUrl": {
     "placeholders": {
       "value": {
         "type": "String"
       }
     }
   },
-  "mustEmail": "يجب إدخال بريد إلكتروني صحيح",
-  "@mustEmail": {
-    "placeholders": {
-      "value": {
-        "type": "String"
-      }
-    }
-  },
-  "mustBePhone": "يجب إدخال هاتف صحيح",
-  "@mustBePhone": {
+  "mustBeEmail": "يجب إدخال بريد إلكتروني صحيح",
+  "@mustBeEmail": {
     "placeholders": {
       "value": {
         "type": "String"

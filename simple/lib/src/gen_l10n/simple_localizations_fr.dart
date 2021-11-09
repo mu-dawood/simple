@@ -98,9 +98,7 @@ class SimpleLocalizationsFr extends SimpleLocalizations {
   String get formatSeperator => ' ، ';
 
   @override
-  String required(dynamic value) {
-    return 'Excuse-moi! Ce champ est obligatoire';
-  }
+  String get required => 'Excuse-moi! Ce champ est obligatoire';
 
   @override
   String stringMaxLength(String value, int max) {
@@ -188,22 +186,22 @@ class SimpleLocalizationsFr extends SimpleLocalizations {
   }
 
   @override
-  String mustBeGitHubUser(String value) {
+  String mustBeGithubUrl(String value) {
     return 'Vous devez saisir un lien de compte Github';
   }
 
   @override
-  String mustBeRedditUser(String value) {
+  String mustBeRedditUrl(String value) {
     return 'Le lien du compte Reddit doit être saisi';
   }
 
   @override
-  String mustBeInstagramUser(String value) {
+  String mustBeInstagramUrl(String value) {
     return 'Le lien du compte Instagram doit être saisi';
   }
 
   @override
-  String mustBeLinkedinUser(String value) {
+  String mustBeLinkedinProfile(String value) {
     return 'Le lien du compte Linkedin doit être saisi';
   }
 
@@ -213,7 +211,7 @@ class SimpleLocalizationsFr extends SimpleLocalizations {
   }
 
   @override
-  String mustBeYoutubeUrl(String value) {
+  String mustBeYoutubeVideoUrl(String value) {
     return 'Le lien Youtube doit être saisi';
   }
 
@@ -228,18 +226,13 @@ class SimpleLocalizationsFr extends SimpleLocalizations {
   }
 
   @override
-  String mustUrl(String value) {
+  String mustBeUrl(String value) {
     return 'Vous devez saisir un lien valide';
   }
 
   @override
-  String mustEmail(String value) {
+  String mustBeEmail(String value) {
     return 'Vous devez entrer un e-mail valide';
-  }
-
-  @override
-  String mustBePhone(String value) {
-    return 'Vous devez entrer un téléphone valide';
   }
 
   @override

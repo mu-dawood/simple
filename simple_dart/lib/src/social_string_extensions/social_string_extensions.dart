@@ -24,8 +24,8 @@ extension SocialStringExtensions on String? {
 
   AngelJobUrl? get angelJob => AngelJobUrl.parse(this ?? '');
 
-  /// check string is angel comapney valid url
-  bool isAngelCompaney([String? company]) {
+  /// check string is angel comapny valid url
+  bool isAngelCompany([String? company]) {
     var o = angelCompany;
     if (o == null) return false;
     return (company == null || o.company == company);
