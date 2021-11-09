@@ -15,6 +15,7 @@
 ## [Iterable extensions](https://github.com/mo-ah-dawood/simple/wiki/Iterable-extentions)
 
 ## [Timer extensions](https://github.com/mo-ah-dawood/simple/wiki/Timer-extentions)
+## [Social links](https://github.com/mo-ah-dawood/simple/wiki/social-links)
 
 
 ## Localization
