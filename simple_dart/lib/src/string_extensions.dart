@@ -100,6 +100,12 @@ extension StringExtensions on String? {
     }
   }
 
+  /// check the string can be DateTime
+  bool get isDateTime {
+    if (this == null) return false;
+    return DateTime.tryParse(this!) != null;
+  }
+
   /// convert `String` to `DateTime` if is possible
   /// else will return null
   DateTime? toDate() {
@@ -120,47 +126,4 @@ extension StringExtensions on String? {
     if (this != null) return int.tryParse(this!);
     return null;
   }
-
-  // check string is gitHub valid url
-  // expression are fro  herehttps://github.com/nothingrandom/social-regex
-  bool get isGitHubUser => RegExp(
-          r'^(http(s)?:\/\/)?(www\.)?github\.com\/(?!-)(?:[A-z0-9-]){1,39}[^-]\/?$')
-      .hasMatch(this ?? '');
-  // check string is gitHub valid url
-  // expression are fro  here https://github.com/nothingrandom/social-regex
-  bool get isRedditUser => RegExp(
-          r'^(http(s)?:\/\/)?(www\.)?reddit\.com\/user\/(?:[A-Za-z0-9_-]{3,20})\/?$')
-      .hasMatch(this ?? '');
-
-  // check string is instagram valid url
-  // expression are fro  here https://github.com/nothingrandom/social-regex
-  bool get isInstagramUser => RegExp(
-          r'^(http(s)?:\/\/)?(www\.)?instagram\.com\/([A-Za-z0-9_](?:(?:[A-Za-z0-9_]|(?:\.(?!\.))){0,28}(?:[A-Za-z0-9_]))?)\/?$')
-      .hasMatch(this ?? '');
-
-  // check string is linkedin valid url
-  // expression are fro  here https://github.com/nothingrandom/social-regex
-  bool get isLinkedinUser => RegExp(
-          r'^(http(s)?:\/\/)?(www\.)?linkedin\.com\/(in|profile|pub)\/([A-z 0-9 _ -]+)\/?$')
-      .hasMatch(this ?? '');
-
-  // check string is facebook valid url
-  // expression are fro  here https://github.com/nothingrandom/social-regex
-  bool get isTwitterUser =>
-      RegExp(r'^(http(s)?:\/\/)?(www\.)?twitter\.com\/[A-z 0-9 _]{1,15}\/?$')
-          .hasMatch(this ?? '');
-
-  // check string is youtube valid url
-  bool get isYoutubeUrl =>
-      RegExp(r'^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$')
-          .hasMatch(this ?? '');
-  // check string is youtube valid url
-  bool get isFacbookPageOrProfile => RegExp(
-          r'(?:(?:http|https):\/\/)?(?:www.)?facebook.com\/(?:(?:\w)*#!\/)?(?:pages\/)?(?:[?\w\-]*\/)?(?:profile.php\?id=(?=\d.*))?([\w\-]*)?')
-      .hasMatch(this ?? '');
-
-  // check string is snapchat valid url
-  bool get isSnapchatProfile => RegExp(
-          r'(?:https?:)?\/\/(?:www\.)?snapchat\.com\/add\/([A-z0-9\.\_\-]+)\/?')
-      .hasMatch(this ?? '');
 }

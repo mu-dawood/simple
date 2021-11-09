@@ -15,7 +15,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
-  simple_dart: ^1.0.9
+  simple_dart: ^1.1.0
 
 
 dev_dependencies:

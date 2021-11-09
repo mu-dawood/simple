@@ -44,6 +44,13 @@
   "now": "الآن",
   "formatSeperator": " ، ",
   "required": "عذرا! هذا الحقل مطلوب",
+  "@required": {
+    "placeholders": {
+      "value": {
+        "type": "dynamic"
+      }
+    }
+  },
   "stringMaxLength": "يجب أن لا يزيد طول النص عن {max}",
   "@stringMaxLength": {
     "placeholders": {
@@ -100,7 +107,8 @@
   "@mustBeDateAfter": {
     "placeholders": {
       "value": {
-        "type": "String"
+        "type": "DateTime",
+        "format": "yMMMEd"
       },
       "after": {
         "type": "DateTime",
@@ -112,7 +120,8 @@
   "@mustBeDateBefore": {
     "placeholders": {
       "value": {
-        "type": "String"
+        "type": "DateTime",
+        "format": "yMMMEd"
       },
       "before": {
         "type": "DateTime",
@@ -124,10 +133,10 @@
   "@mustBeTimeOfDayAfter": {
     "placeholders": {
       "value": {
-        "type": "String"
+        "type": "dynamic"
       },
       "after": {
-        "type": "String"
+        "type": "dynamic"
       }
     }
   },
@@ -135,10 +144,40 @@
   "@mustBeTimeOfDayBefore": {
     "placeholders": {
       "value": {
-        "type": "String"
+        "type": "dynamic"
       },
       "before": {
-        "type": "String"
+        "type": "dynamic"
+      }
+    }
+  },
+  "mustBeDateBetween": "يجب إختيار تاريخ بين {min} و {max}",
+  "@mustBeDateBetween": {
+    "placeholders": {
+      "value": {
+        "type": "dynamic"
+      },
+      "min": {
+        "type": "DateTime",
+        "format": "yMMMEd"
+      },
+      "max": {
+        "type": "DateTime",
+        "format": "yMMMEd"
+      }
+    }
+  },
+  "mustBeTimeOfDayBetween": "يجب إختيار وقت بين {min} و {max}",
+  "@mustBeTimeOfDayBetween": {
+    "placeholders": {
+      "value": {
+        "type": "dynamic"
+      },
+      "min": {
+        "type": "dynamic"
+      },
+      "max": {
+        "type": "dynamic"
       }
     }
   },
@@ -158,8 +197,8 @@
       }
     }
   },
-  "mustBeDouble": "يجب إدخال رقم عشري",
-  "@mustBeDouble": {
+  "mustBeDecimal": "يجب إدخال رقم عشري",
+  "@mustBeDecimal": {
     "placeholders": {
       "value": {
         "type": "String"
@@ -278,7 +317,7 @@
       }
     }
   },
-  "mustBeLocaleKsaPhone":   "يجب إدخال رقم سعودي محلي مثل (05xxxxxxxx)",
+  "mustBeLocaleKsaPhone": "يجب إدخال رقم سعودي محلي مثل (05xxxxxxxx)",
   "@mustBeLocaleKsaPhone": {
     "placeholders": {
       "value": {
@@ -286,7 +325,7 @@
       }
     }
   },
-  "mustBeInternationalKsaPhone":  "يجب إدخال رقم سعودي بالصيغة الدولية مثل (96605xxxxxxxx)",
+  "mustBeInternationalKsaPhone": "يجب إدخال رقم سعودي بالصيغة الدولية مثل (96605xxxxxxxx)",
   "@mustBeInternationalKsaPhone": {
     "placeholders": {
       "value": {

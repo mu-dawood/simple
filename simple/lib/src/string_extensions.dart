@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dart:ui' as ui show TextHeightBehavior;
+
+import 'package:flutter/material.dart';
 
 extension FlutterStringExtensions on String? {
   /// will parse string to time of days
@@ -27,18 +28,6 @@ extension FlutterStringExtensions on String? {
   /// check the string can be timeofDay
   bool get isTimeOfDay {
     return toTimeOfDay() != null;
-  }
-
-  /// check the string can be DateTime
-  bool get isDateTime {
-    if (this == null) return false;
-    return DateTime.tryParse(this!) != null;
-  }
-
-  /// convert string to date time
-  DateTime? toDate() {
-    if (this == null) return null;
-    return DateTime.tryParse(this!);
   }
 
   /// converts string to text widget

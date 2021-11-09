@@ -156,7 +156,7 @@ abstract class SimpleLocalizations {
   ///
   /// In ar, this message translates to:
   /// **'عذرا! هذا الحقل مطلوب'**
-  String get required;
+  String required(dynamic value);
 
   /// No description provided for @stringMaxLength.
   ///
@@ -192,25 +192,37 @@ abstract class SimpleLocalizations {
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال تاريخ لاحق ل {after}'**
-  String mustBeDateAfter(String value, DateTime after);
+  String mustBeDateAfter(DateTime value, DateTime after);
 
   /// No description provided for @mustBeDateBefore.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال تاريخ سابق ل {before}'**
-  String mustBeDateBefore(String value, DateTime before);
+  String mustBeDateBefore(DateTime value, DateTime before);
 
   /// No description provided for @mustBeTimeOfDayAfter.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال وقت لاحق ل {after}'**
-  String mustBeTimeOfDayAfter(String value, String after);
+  String mustBeTimeOfDayAfter(dynamic value, dynamic after);
 
   /// No description provided for @mustBeTimeOfDayBefore.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال وقت سابق ل {before}'**
-  String mustBeTimeOfDayBefore(String value, String before);
+  String mustBeTimeOfDayBefore(dynamic value, dynamic before);
+
+  /// No description provided for @mustBeDateBetween.
+  ///
+  /// In ar, this message translates to:
+  /// **'يجب إختيار تاريخ بين {min} و {max}'**
+  String mustBeDateBetween(dynamic value, DateTime min, DateTime max);
+
+  /// No description provided for @mustBeTimeOfDayBetween.
+  ///
+  /// In ar, this message translates to:
+  /// **'يجب إختيار وقت بين {min} و {max}'**
+  String mustBeTimeOfDayBetween(dynamic value, dynamic min, dynamic max);
 
   /// No description provided for @mustBeNumber.
   ///
@@ -224,11 +236,11 @@ abstract class SimpleLocalizations {
   /// **'يجب إدخال رقم غير عشري'**
   String mustBeInteger(String value);
 
-  /// No description provided for @mustBeDouble.
+  /// No description provided for @mustBeDecimal.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال رقم عشري'**
-  String mustBeDouble(String value);
+  String mustBeDecimal(String value);
 
   /// No description provided for @mustBeGitHubUser.
   ///

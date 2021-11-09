@@ -98,7 +98,9 @@ class SimpleLocalizationsFr extends SimpleLocalizations {
   String get formatSeperator => ' ، ';
 
   @override
-  String get required => 'Excuse-moi! Ce champ est obligatoire';
+  String required(dynamic value) {
+    return 'Excuse-moi! Ce champ est obligatoire';
+  }
 
   @override
   String stringMaxLength(String value, int max) {
@@ -126,7 +128,9 @@ class SimpleLocalizationsFr extends SimpleLocalizations {
   }
 
   @override
-  String mustBeDateAfter(String value, DateTime after) {
+  String mustBeDateAfter(DateTime value, DateTime after) {
+    final intl.DateFormat valueDateFormat = intl.DateFormat.yMMMEd(localeName);
+    final String valueString = valueDateFormat.format(value);
     final intl.DateFormat afterDateFormat = intl.DateFormat.yMMMEd(localeName);
     final String afterString = afterDateFormat.format(after);
 
@@ -134,7 +138,9 @@ class SimpleLocalizationsFr extends SimpleLocalizations {
   }
 
   @override
-  String mustBeDateBefore(String value, DateTime before) {
+  String mustBeDateBefore(DateTime value, DateTime before) {
+    final intl.DateFormat valueDateFormat = intl.DateFormat.yMMMEd(localeName);
+    final String valueString = valueDateFormat.format(value);
     final intl.DateFormat beforeDateFormat = intl.DateFormat.yMMMEd(localeName);
     final String beforeString = beforeDateFormat.format(before);
 
@@ -142,13 +148,28 @@ class SimpleLocalizationsFr extends SimpleLocalizations {
   }
 
   @override
-  String mustBeTimeOfDayAfter(String value, String after) {
+  String mustBeTimeOfDayAfter(dynamic value, dynamic after) {
     return 'Vous devez entrer ultérieurement pour $after';
   }
 
   @override
-  String mustBeTimeOfDayBefore(String value, String before) {
+  String mustBeTimeOfDayBefore(dynamic value, dynamic before) {
     return 'Vous devez entrer une date antérieure pour $before';
+  }
+
+  @override
+  String mustBeDateBetween(dynamic value, DateTime min, DateTime max) {
+    final intl.DateFormat minDateFormat = intl.DateFormat.yMMMEd(localeName);
+    final String minString = minDateFormat.format(min);
+    final intl.DateFormat maxDateFormat = intl.DateFormat.yMMMEd(localeName);
+    final String maxString = maxDateFormat.format(max);
+
+    return 'يجب إختيار تاريخ بين $minString و $maxString';
+  }
+
+  @override
+  String mustBeTimeOfDayBetween(dynamic value, dynamic min, dynamic max) {
+    return 'يجب إختيار وقت بين $min و $max';
   }
 
   @override
@@ -162,7 +183,7 @@ class SimpleLocalizationsFr extends SimpleLocalizations {
   }
 
   @override
-  String mustBeDouble(String value) {
+  String mustBeDecimal(String value) {
     return 'Vous devez entrer un nombre décimal';
   }
 
