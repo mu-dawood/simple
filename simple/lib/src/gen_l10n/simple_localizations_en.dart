@@ -234,7 +234,7 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
   }
 
   @override
-  String mustBeLocaleEgyptianPhone(String value) {
+  String mustBeLocalEgyptianPhone(String value) {
     return 'You must enter a local Egyptian number such as (015xxxxxxxx)';
   }
 
@@ -244,7 +244,7 @@ class SimpleLocalizationsEn extends SimpleLocalizations {
   }
 
   @override
-  String mustBeLocaleKsaPhone(String value) {
+  String mustBeLocalKsaPhone(String value) {
     return 'You must enter a local Saudi number such as (05xxxxxxxx)';
   }
 

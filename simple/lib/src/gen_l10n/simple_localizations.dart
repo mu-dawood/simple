@@ -308,11 +308,11 @@ abstract class SimpleLocalizations {
   /// **'يجب إدخال لون صحيح مثل (#ff0000)'**
   String mustBeHexColor(String value);
 
-  /// No description provided for @mustBeLocaleEgyptianPhone.
+  /// No description provided for @mustBeLocalEgyptianPhone.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال رقم مصري محلي مثل (015xxxxxxxx)'**
-  String mustBeLocaleEgyptianPhone(String value);
+  String mustBeLocalEgyptianPhone(String value);
 
   /// No description provided for @mustBeInternationalEgyptianPhone.
   ///
@@ -320,11 +320,11 @@ abstract class SimpleLocalizations {
   /// **'يجب إدخال رقم مصري بالصيغة الدولية مثل (2015xxxxxxxx)'**
   String mustBeInternationalEgyptianPhone(String value);
 
-  /// No description provided for @mustBeLocaleKsaPhone.
+  /// No description provided for @mustBeLocalKsaPhone.
   ///
   /// In ar, this message translates to:
   /// **'يجب إدخال رقم سعودي محلي مثل (05xxxxxxxx)'**
-  String mustBeLocaleKsaPhone(String value);
+  String mustBeLocalKsaPhone(String value);
 
   /// No description provided for @mustBeInternationalKsaPhone.
   ///

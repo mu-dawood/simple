@@ -58,9 +58,9 @@ extension StringFeildValidatorExt on FieldValidator<String> {
 
   FieldValidator<String> email() => add((context) => context.email());
   FieldValidator<String> hexColor() => add((context) => context.hexColor());
-  FieldValidator<String> localeEgyptianPhone() => add((context) => context.localeEgyptianPhone());
+  FieldValidator<String> localEgyptianPhone() => add((context) => context.localEgyptianPhone());
   FieldValidator<String> internationalEgyptianPhone() => add((context) => context.internationalEgyptianPhone());
-  FieldValidator<String> localeKsaPhone() => add((context) => context.localeKsaPhone());
+  FieldValidator<String> localKsaPhone() => add((context) => context.localKsaPhone());
   FieldValidator<String> internationalKsaPhone() => add((context) => context.internationalKsaPhone());
   FieldValidator<String> githubUrl({String? user, String? repositry}) => add((context) => context.githubUrl(user: user, repositry: repositry));
   FieldValidator<String> redditUrl([String? user]) => add((context) => context.redditUrl(user));

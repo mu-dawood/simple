@@ -103,13 +103,13 @@ class ValidationMessages {
 
   /// works for String
 
-  final String Function(String value)? mustBeLocaleEgyptianPhone;
+  final String Function(String value)? mustBeLocalEgyptianPhone;
 
   /// works for String
 
   final String Function(String value)? mustBeInternationalEgyptianPhone;
 
-  final String Function(String value)? mustBeLocaleKsaPhone;
+  final String Function(String value)? mustBeLocalKsaPhone;
 
   /// works for String
 
@@ -142,9 +142,9 @@ class ValidationMessages {
     this.mustBeUrl,
     this.mustBeEmail,
     this.mustBeHexColor,
-    this.mustBeLocaleEgyptianPhone,
+    this.mustBeLocalEgyptianPhone,
     this.mustBeInternationalEgyptianPhone,
-    this.mustBeLocaleKsaPhone,
+    this.mustBeLocalKsaPhone,
     this.mustBeInternationalKsaPhone,
   });
 
@@ -176,9 +176,9 @@ class ValidationMessages {
       mustBeUrl: values?.mustBeUrl ?? this.mustBeUrl,
       mustBeEmail: values?.mustBeEmail ?? this.mustBeEmail,
       mustBeHexColor: values?.mustBeHexColor ?? this.mustBeHexColor,
-      mustBeLocaleEgyptianPhone: values?.mustBeLocaleEgyptianPhone ?? this.mustBeLocaleEgyptianPhone,
+      mustBeLocalEgyptianPhone: values?.mustBeLocalEgyptianPhone ?? this.mustBeLocalEgyptianPhone,
       mustBeInternationalEgyptianPhone: values?.mustBeInternationalEgyptianPhone ?? this.mustBeInternationalEgyptianPhone,
-      mustBeLocaleKsaPhone: values?.mustBeLocaleKsaPhone ?? this.mustBeLocaleKsaPhone,
+      mustBeLocalKsaPhone: values?.mustBeLocalKsaPhone ?? this.mustBeLocalKsaPhone,
       mustBeInternationalKsaPhone: values?.mustBeInternationalKsaPhone ?? this.mustBeInternationalKsaPhone,
     );
   }
@@ -287,13 +287,13 @@ class DefaultValidationMessages extends ValidationMessages {
 
   /// works for String
 
-  final String Function(String value) mustBeLocaleEgyptianPhone;
+  final String Function(String value) mustBeLocalEgyptianPhone;
 
   /// works for String
 
   final String Function(String value) mustBeInternationalEgyptianPhone;
 
-  final String Function(String value) mustBeLocaleKsaPhone;
+  final String Function(String value) mustBeLocalKsaPhone;
 
   /// works for String
 
@@ -326,9 +326,9 @@ class DefaultValidationMessages extends ValidationMessages {
     required this.mustBeUrl,
     required this.mustBeEmail,
     required this.mustBeHexColor,
-    required this.mustBeLocaleEgyptianPhone,
+    required this.mustBeLocalEgyptianPhone,
     required this.mustBeInternationalEgyptianPhone,
-    required this.mustBeLocaleKsaPhone,
+    required this.mustBeLocalKsaPhone,
     required this.mustBeInternationalKsaPhone,
   });
 
@@ -362,9 +362,9 @@ class DefaultValidationMessages extends ValidationMessages {
       mustBeUrl: values?.mustBeUrl ?? tr.mustBeUrl,
       mustBeEmail: values?.mustBeEmail ?? tr.mustBeEmail,
       mustBeHexColor: values?.mustBeHexColor ?? tr.mustBeHexColor,
-      mustBeLocaleEgyptianPhone: values?.mustBeLocaleEgyptianPhone ?? tr.mustBeLocaleEgyptianPhone,
+      mustBeLocalEgyptianPhone: values?.mustBeLocalEgyptianPhone ?? tr.mustBeLocalEgyptianPhone,
       mustBeInternationalEgyptianPhone: values?.mustBeInternationalEgyptianPhone ?? tr.mustBeInternationalEgyptianPhone,
-      mustBeLocaleKsaPhone: values?.mustBeLocaleKsaPhone ?? tr.mustBeLocaleKsaPhone,
+      mustBeLocalKsaPhone: values?.mustBeLocalKsaPhone ?? tr.mustBeLocalKsaPhone,
       mustBeInternationalKsaPhone: values?.mustBeInternationalKsaPhone ?? tr.mustBeInternationalKsaPhone,
     );
   }

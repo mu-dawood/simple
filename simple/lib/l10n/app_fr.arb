@@ -19,8 +19,8 @@
   "mustBeInternationalEgyptianPhone": "Vous devez entrer un numéro égyptien au format international tel que (2015xxxxxxxx)",
   "mustBeInternationalKsaPhone": "Vous devez entrer un numéro saoudien au format international tel que (96605xxxxxxxx)",
   "mustBeLinkedinProfile": "Le lien du compte Linkedin doit être saisi",
-  "mustBeLocaleEgyptianPhone": "Vous devez entrer un numéro égyptien local tel que (015xxxxxxxx)",
-  "mustBeLocaleKsaPhone": "Vous devez entrer un numéro saoudien local tel que (05xxxxxxxx)",
+  "mustBeLocalEgyptianPhone": "Vous devez entrer un numéro égyptien local tel que (015xxxxxxxx)",
+  "mustBeLocalKsaPhone": "Vous devez entrer un numéro saoudien local tel que (05xxxxxxxx)",
   "mustBeNumber": "Vous devez entrer un numéro",
   
   "mustBeRedditUrl": "Le lien du compte Reddit doit être saisi",

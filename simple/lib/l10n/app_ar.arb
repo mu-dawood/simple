@@ -286,8 +286,8 @@
       }
     }
   },
-  "mustBeLocaleEgyptianPhone": "يجب إدخال رقم مصري محلي مثل (015xxxxxxxx)",
-  "@mustBeLocaleEgyptianPhone": {
+  "mustBeLocalEgyptianPhone": "يجب إدخال رقم مصري محلي مثل (015xxxxxxxx)",
+  "@mustBeLocalEgyptianPhone": {
     "placeholders": {
       "value": {
         "type": "String"
@@ -302,8 +302,8 @@
       }
     }
   },
-  "mustBeLocaleKsaPhone": "يجب إدخال رقم سعودي محلي مثل (05xxxxxxxx)",
-  "@mustBeLocaleKsaPhone": {
+  "mustBeLocalKsaPhone": "يجب إدخال رقم سعودي محلي مثل (05xxxxxxxx)",
+  "@mustBeLocalKsaPhone": {
     "placeholders": {
       "value": {
         "type": "String"

@@ -253,9 +253,9 @@ extension ValidationExtensions on BuildContext {
   }
 
   /// Valiadate TextFormField
-  FieldValidator<String> localeEgyptianPhone() {
+  FieldValidator<String> localEgyptianPhone() {
     return _validateIfExists<String>((v) {
-      if (!v.isLocaleEgyptianPhone) return messages.mustBeLocaleEgyptianPhone(v);
+      if (!v.isLocalEgyptianPhone) return messages.mustBeLocalEgyptianPhone(v);
     });
   }
 
@@ -267,9 +267,9 @@ extension ValidationExtensions on BuildContext {
   }
 
   /// Valiadate TextFormField
-  FieldValidator<String> localeKsaPhone() {
+  FieldValidator<String> localKsaPhone() {
     return _validateIfExists<String>((v) {
-      if (!v.isLocaleKsaPhone) return messages.mustBeLocaleKsaPhone(v);
+      if (!v.isLocalKsaPhone) return messages.mustBeLocalKsaPhone(v);
     });
   }
 

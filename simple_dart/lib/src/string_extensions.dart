@@ -43,9 +43,9 @@ extension StringExtensions on String? {
   bool get isNullOrEmpty {
     return this == null || this == '';
   }
-  // check string is locale egyptian phone
+  // check string is local egyptian phone
 
-  bool get isLocaleEgyptianPhone {
+  bool get isLocalEgyptianPhone {
     return RegExp(r'^(01|1)([0-9]{9})$').hasMatch(this ?? '');
   }
   // check string is international egyptian phone
@@ -53,17 +53,15 @@ extension StringExtensions on String? {
   bool get isInternationalEgyptianPhone {
     return RegExp(r'^(00201|201|\+201)([0-9]{9})$').hasMatch(this ?? '');
   }
-  // check string is locale ksa phone
+  // check string is local ksa phone
 
-  bool get isLocaleKsaPhone {
+  bool get isLocalKsaPhone {
     return RegExp(r'^(05)(5|0|3|6|4|9|1|8|7)([0-9]{7})$').hasMatch(this ?? '');
   }
 
   // check string is international ksa phone
   bool get isInternationalKsaPhone {
-    return RegExp(
-            r'^(009665|0096605|9665|96605|\+9665|\+96605|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$')
-        .hasMatch(this ?? '');
+    return RegExp(r'^(009665|0096605|9665|96605|\+9665|\+96605|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$').hasMatch(this ?? '');
   }
 
   /// return `true` if the are equals with case matching

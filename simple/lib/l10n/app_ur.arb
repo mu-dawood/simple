@@ -18,8 +18,8 @@
   "mustBeInternationalEgyptianPhone": "آپ کو بین الاقوامی شکل میں ایک مصری نمبر درج کرنا ہوگا جیسے (2015xxxxxxxx)",
   "mustBeInternationalKsaPhone": "آپ کو بین الاقوامی شکل میں سعودی نمبر درج کرنا ہوگا جیسے (96605xxxxxxxx)",
   "mustBeLinkedinProfile": "لنکڈین اکاؤنٹ کا لنک درج ہونا ضروری ہے",
-  "mustBeLocaleEgyptianPhone": "آپ کو مقامی مصری نمبر درج کرنا ہوگا جیسے (015xxxxxxxx)",
-  "mustBeLocaleKsaPhone": "آپ کو ایک مقامی سعودی نمبر درج کرنا ہوگا جیسے (05xxxxxxxx)",
+  "mustBeLocalEgyptianPhone": "آپ کو مقامی مصری نمبر درج کرنا ہوگا جیسے (015xxxxxxxx)",
+  "mustBeLocalKsaPhone": "آپ کو ایک مقامی سعودی نمبر درج کرنا ہوگا جیسے (05xxxxxxxx)",
   "mustBeNumber": "آپ کو ایک نمبر درج کرنا ہوگا",
   
   "mustBeRedditUrl": "ریڈٹ اکاؤنٹ کا لنک درج ہونا ضروری ہے",
