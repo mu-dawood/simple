@@ -19,9 +19,7 @@ class GooglePlusIdUrl {
 
   GooglePlusIdUrl._(this.id);
   static GooglePlusIdUrl? parse(String url) {
-    var matches =
-        RegExp(r'^(?:https?:)?\/\/plus\.google\.com\/(?<id>[0-9]{21})$')
-            .allMatches(url);
+    var matches = RegExp(r'(?:https?:)?\/\/plus\.google\.com\/(?<id>[0-9]{21})').allMatches(url);
     var _id = matches.getValue("id");
     if (_id == null) return null;
     return GooglePlusIdUrl._(_id);
@@ -33,9 +31,7 @@ class GooglePlusUserNameUrl {
 
   GooglePlusUserNameUrl._(this.username);
   static GooglePlusUserNameUrl? parse(String url) {
-    var matches = RegExp(
-            r'^(?:https?:)?\/\/plus\.google\.com\/\+(?<username>[A-z0-9+]+)$')
-        .allMatches(url);
+    var matches = RegExp(r'(?:https?:)?\/\/plus\.google\.com\/\+(?<username>[A-z0-9+]+)').allMatches(url);
     var _username = matches.getValue("username");
     if (_username == null) return null;
     return GooglePlusUserNameUrl._(_username);
