@@ -8,16 +8,16 @@ extension NumExtensions on num? {
 
   String noTrailing([int? fractionDigits]) {
     if (this == null) return '';
-    var str = ((fractionDigits == null
-            ? this!.toString()
-            : this!.toStringAsFixed(fractionDigits)))
-        .replaceAll(r'\.0+$', '');
+    var str = ((fractionDigits == null ? this!.toString() : this!.toStringAsFixed(fractionDigits))).replaceAll(r'\.0+$', '');
 
     var dotIndex = str.indexOf(".");
     if (dotIndex < 0 || fractionDigits != null) return str;
-    var last = str.lastIndexOf(RegExp(r'[1-9]'));
-
-    return str.substring(0, last + 1);
+    var splits = str.split('.');
+    var trailing = splits[1].replaceAll(RegExp(r'0+$'), '');
+    if (trailing.isEmpty)
+      return splits[0];
+    else
+      return '${splits[0]}.${trailing}';
   }
 
   String currency({
