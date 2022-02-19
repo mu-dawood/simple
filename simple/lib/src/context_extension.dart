@@ -5,14 +5,12 @@ extension ContextExtensions on BuildContext {
   /// 0.0 -> Expanded
   /// 1.0 -> Collapsed to toolbar
   double get appBarExpansionPercent {
-    final settings =
-        dependOnInheritedWidgetOfExactType<FlexibleSpaceBarSettings>();
+    final settings = dependOnInheritedWidgetOfExactType<FlexibleSpaceBarSettings>();
     assert(settings != null);
     if (settings != null) {
       final deltaExtent = settings.maxExtent - settings.minExtent;
 
-      return (1.0 - (settings.currentExtent - settings.minExtent) / deltaExtent)
-          .clamp(0.0, 1.0);
+      return (1.0 - (settings.currentExtent - settings.minExtent) / deltaExtent).clamp(0.0, 1.0);
     }
     return 0;
   }
@@ -87,6 +85,6 @@ extension ContextExtensions on BuildContext {
   /// Check if directionality is ltr
   bool get isLtr => Directionality.of(this) == TextDirection.ltr;
 
-  /// Get current locale if exisis
+  /// Get current locale if exists
   Locale? get locale => Localizations.maybeLocaleOf(this);
 }
